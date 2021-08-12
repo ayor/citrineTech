@@ -31,9 +31,8 @@ export default async (req, res) => {
             subject: `Message from ${name}<${email}>`, // Subject line
             text: `
             ${name} with email - <${email}>
-            and Phone number${phone} said
+            and Phone number:${phone} said
             ${message} 
-                
             `, // plain text body
         });
         console.log(info)
