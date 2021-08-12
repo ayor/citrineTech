@@ -1,7 +1,10 @@
 
 const nodemailer = require("nodemailer");
+
 const _usermail = "dosumuayomide@gmail.com"
-const _userpass = "Badejoko1"
+const _hashedpass = "$2a$12$3Js.5o2PCEDVd.cHxPQOZOZEZADLzpo/8lq4XLrz7.kG7AW5c586e";
+
+const _userpass = process.env.PASS;
 
 
 
