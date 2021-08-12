@@ -1,0 +1,50 @@
+.header {
+  height: 100vh;
+  /* background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)), no-repeat center center /cover; */
+}
+
+.Video {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  max-width: 100%;
+  min-height: 100%;
+}
+
+/* banner */
+.banner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+  }
+  
+  .bannerHeading {
+    animation-name: anim;
+    animation-duration: 2s;
+  }
+  
+  .bannerPar {
+    animation-name: anim;
+    animation-duration: 2s;
+    animation-delay: .5s;
+    animation-fill-mode: backwards;
+  }
+  
+  .lead_anim{
+      animation: anim .8s ease-in backwards;
+      transition: all;
+  }
+  
+  @keyframes anim {
+    0% {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  /* end of banner */

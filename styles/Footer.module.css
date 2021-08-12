@@ -1,0 +1,13 @@
+/* footer */
+.footerLink {
+    color: #eee;
+    font-size: 13px;
+    transition: all .3s;
+  }
+  
+  .footerLink:hover {
+    color: #70aed2;
+    text-decoration: none;
+  }
+  /* end of footer */
+  
