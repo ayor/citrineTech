@@ -53,11 +53,11 @@ const Footer = () => (
                         <iframe width="350" height="263" src="https://www.youtube.com/embed/PLIfFgq1994" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                     </div>
                     <ul className="list-inline">
-                        <li className="list-inline-item"><a href="https://www.facebook.com/citrinetech" target="_blank"></a><i className="fa fa-facebook-square text-primary"></i></li>
-                        <li className="list-inline-item"><a href="https://twitter.com/citrinetech" target="_blank"><i className="fa fa-twitter  text-info"></i></a></li>
-                        <li className="list-inline-item"><a href="https://www.linkedin.com/company/citrineltd" target="_blank"><i className="fa fa-linkedin-square  text-primary"></i></a></li>
-                        <li className="list-inline-item"><a href="https://www.instagram.com/citrinetech/?hl=en" target="_blank"><i className="fa fa-instagram  text-warning"></i></a></li>
-                        <li className="list-inline-item"><a href="https://www.youtube.com/channel/UCSws4FRBtxqn-tcmAYAIHgA" target="_blank"><i className="fa fa-youtube text-danger"></i></a></li>
+                        <li className="list-inline-item"><a href="https://www.facebook.com/citrinetech" target="_blank" rel="noreferrer"></a><i className="fa fa-facebook-square text-primary"></i></li>
+                        <li className="list-inline-item"><a href="https://twitter.com/citrinetech" target="_blank" rel="noreferrer"><i className="fa fa-twitter  text-info"></i></a></li>
+                        <li className="list-inline-item"><a href="https://www.linkedin.com/company/citrineltd" target="_blank" rel="noreferrer"><i className="fa fa-linkedin-square  text-primary"></i></a></li>
+                        <li className="list-inline-item"><a href="https://www.instagram.com/citrinetech/?hl=en" target="_blank" rel="noreferrer"><i className="fa fa-instagram  text-warning"></i></a></li>
+                        <li className="list-inline-item"><a href="https://www.youtube.com/channel/UCSws4FRBtxqn-tcmAYAIHgA" target="_blank" rel="noreferrer"><i className="fa fa-youtube text-danger"></i></a></li>
                     </ul>
                 </div>
             </div>
