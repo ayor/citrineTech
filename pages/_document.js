@@ -1,4 +1,5 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document'
+import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Script from "next/script";
 
 class MyDocument extends Document {
 
@@ -7,7 +8,7 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <script src="https://use.fontawesome.com/225871c0fe.js"></script>
+          <Script src="https://use.fontawesome.com/225871c0fe.js"></Script>
           <meta charSet="UTF-8" />
           <meta lang="en-us" />
           <meta name="description" content="Citrine Technologies Ltd (Citrine) is an IT company that offers timely services as
@@ -34,8 +35,8 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/2761242.js"></script>
-          <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/2761242.js"></script>
+          <Script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/2761242.js"></Script>
+          <Script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/2761242.js"></Script>
         </body>
       </Html>
     )
