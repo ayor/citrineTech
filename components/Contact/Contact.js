@@ -56,7 +56,8 @@ const Contact = () => {
                 message
             }
             //
-            let response = await axios.post(`${server}/api/message`,
+            // let response = await axios.post(`${server}/api/message`,
+            let response = await axios.post(`/api/message`,
                 {
                     ...data
                 }
