@@ -57,7 +57,7 @@ const Contact = () => {
             }
             //
             // let response = await axios.post(`${server}/api/message`,
-            let response = await axios.post(`/api/message`,
+            let response = await axios.post(`https://citrine-tech-i9u1h3gvf-ayor.vercel.app/api/message`,
                 {
                     ...data
                 }
