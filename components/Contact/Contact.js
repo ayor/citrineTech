@@ -39,9 +39,9 @@ const Contact = () => {
         try {
 
             event.preventDefault();
-            console.log(process.env.NEXT_PUBLIC_VERCEL_URL);
-            
-            if (name.trim() == "" || email.trim() == "" || message.trim() == "") {
+            console.log(process.env.VERCEL_URL);
+
+            if (name.trim() === "" || email.trim() === "" || message.trim() === "" || phone.trim() === "") {
                 setErrorMessage("kindly complete all fields, then try again");
 
                 setTimeout(() => {
@@ -58,7 +58,7 @@ const Contact = () => {
             }
             //
             // let response = await axios.post(`${server}/api/message`,
-            let response = await axios.post(`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/message`,
+            let response = await axios.post(`/api/message`,
                 {
                     ...data
                 }
