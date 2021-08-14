@@ -41,7 +41,7 @@ const Contact = () => {
         try {
 
             event.preventDefault();
-            
+            console.logI(sever);
             setLoadingState(true); 
 
             if (name.trim() === "" || email.trim() === "" || message.trim() === "" || phone.trim() === "") {
@@ -61,7 +61,7 @@ const Contact = () => {
             }
             //
             // let response = await axios.post(`${server}/api/message`,
-            let response = await axios.post(`${server}/api/message`,
+            let response = await axios.post(`/api/message`,
                 {
                     ...data
                 }
