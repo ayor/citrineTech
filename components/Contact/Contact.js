@@ -57,7 +57,7 @@ const Contact = () => {
             }
             //
             // let response = await axios.post(`${server}/api/message`,
-            let response = await axios.post(`${server}/api/message`,
+            let response = await axios.post(`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/message`,
                 {
                     ...data
                 }
