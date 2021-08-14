@@ -1,5 +1,6 @@
 import { server } from "../../config/config";
 import axios from 'axios';
+import Spinner from '../Spinner/spinner';
 import ContactStyles from '../../styles/Contact.module.css';
 import React, { useState } from "react";
 
@@ -10,7 +11,8 @@ const Contact = () => {
     const [phone, setPhone] = useState("");
     const [message, setMessage] = useState("");
     const [errorMessage, setErrorMessage] = useState("");
-    const [messageClass, setMessageClass] = useState("danger")
+    const [messageClass, setMessageClass] = useState("danger");
+    const [loadingState, setLoadingState] = useState(false)
 
 
     const inputHandler = (event, type) => {
@@ -39,7 +41,8 @@ const Contact = () => {
         try {
 
             event.preventDefault();
-            console.log(process.env.VERCEL_URL);
+            
+            setLoadingState(true); 
 
             if (name.trim() === "" || email.trim() === "" || message.trim() === "" || phone.trim() === "") {
                 setErrorMessage("kindly complete all fields, then try again");
@@ -58,13 +61,14 @@ const Contact = () => {
             }
             //
             // let response = await axios.post(`${server}/api/message`,
-            let response = await axios.post(`/api/message`,
+            let response = await axios.post(`${server}/api/message`,
                 {
                     ...data
                 }
             );
 
             if (response.status === 200) {
+                setLoadingState|(false);
                 setErrorMessage("Successfully sent your message");
                 setMessageClass("success")
 
@@ -74,15 +78,13 @@ const Contact = () => {
 
             }
 
-
-
             setName("");
             setEmail("");
             setMessage("");
         } catch ({ response: { data } }) {
             setErrorMessage(data.message);
                 setMessageClass("danger");
-
+                setLoadingState(false)
                 setTimeout(() => {
                     setErrorMessage("");
                 }, 3000)
@@ -118,8 +120,7 @@ const Contact = () => {
                                 </textarea>
                             </div>
                             <button type="submit"
-                                className={"btn btn-block p-2 font-weight-bold text-uppercase " + ContactStyles.submitButton}>Send
-                                Message</button>
+                                className={"btn btn-block p-2 font-weight-bold text-uppercase " + ContactStyles.submitButton}> {loadingState ? <Spinner/> : "Send Message"}</button>
                         </form>
                     </div>
                 </div>
