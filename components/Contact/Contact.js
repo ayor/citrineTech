@@ -67,6 +67,8 @@ const Contact = () => {
                 }
             );
 
+            console.log(response);
+
             if (response.status === 200) {
                 setLoadingState|(false);
                 setErrorMessage("Successfully sent your message");
