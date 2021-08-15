@@ -59,9 +59,10 @@ const Contact = () => {
                 phone,
                 message
             }
+            console.log(data)
             //
             // let response = await axios.post(`${server}/api/message`,
-            let response = await axios.post(`api/message`,
+            let response = await axios.post(`/api/message`,
                 {
                     ...data
                 }
@@ -83,7 +84,12 @@ const Contact = () => {
             setName("");
             setEmail("");
             setMessage("");
-        } catch ({ response: { data } }) {
+        } catch (error) {
+
+            console.log(error)
+
+            const { response: { data } } = error; 
+
             setErrorMessage(data.message);
                 setMessageClass("danger");
                 setLoadingState(false)
