@@ -60,10 +60,6 @@ const Contact = () => {
             if (!captchaCode) {
                 return;
             }
-
-
-
-
             const data = {
                 name,
                 email,
@@ -111,8 +107,6 @@ const Contact = () => {
         }
     }
 
-    console.log(process.env)
-
     return (
         <section className={"p-5 " + ContactStyles.contact}>
             <div className="container-fluid" id="contact">
@@ -140,8 +134,8 @@ const Contact = () => {
                                     name="message" id="message" cols="10" rows="8">
                                 </textarea>
                             </div>
-                                <ReCaptcha size="normal"
-                                    sitekey={process.env.NEXT_SITE_KEY} 
+                                <ReCaptcha size="invisible"
+                                    sitekey={process.env.NEXT_PUBLIC_SITE_KEY} 
                                     onChange={captchaHanlder} ref={captchaRef} />
 
                             <button type="submit"

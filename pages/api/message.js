@@ -35,7 +35,7 @@ const messageHandler = async (req, res) => {
         }
 
         const response = await fetch(
-            `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.NEXT_SECRET_KEY}&response=${captchaCode}`,
+            `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.NEXT_PUBLIC_SECRET_KEY}&response=${captchaCode}`,
             {
               headers: {
                 "Content-Type": "application/x-www-form-urlencoded; charset=utf-8",
