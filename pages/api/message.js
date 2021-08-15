@@ -18,7 +18,7 @@ let transporter = nodemailer.createTransport({
 });
 
 
-export default messageHandler = async (req, res) => {
+const messageHandler = async (req, res) => {
     try {
         if (req.method !== 'POST') {
             res.status(400).send({ message: 'Only POST requests allowed' })
@@ -53,7 +53,6 @@ export default messageHandler = async (req, res) => {
             error
         })
     }
-
-
-
 }
+
+export default messageHandler; 
