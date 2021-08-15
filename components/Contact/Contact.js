@@ -41,7 +41,7 @@ const Contact = () => {
         try {
 
             event.preventDefault();
-            console.log(sever);
+            console.log(server);
             setLoadingState(true); 
 
             if (name.trim() === "" || email.trim() === "" || message.trim() === "" || phone.trim() === "") {
