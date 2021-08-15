@@ -2,12 +2,12 @@ import '../styles/globals.css';
 import Head from "next/head";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Layout from '../components/Layout';
-
+import Script from 'next/script';
 function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-      <script src="https://use.fontawesome.com/225871c0fe.js"></script>
+      <Script src="https://use.fontawesome.com/225871c0fe.js"></Script>
         <meta charSet="UTF-8" />
         <meta lang="en-us" />
         <meta name="description" content="Citrine Technologies Ltd (Citrine) is an IT company that offers timely services as
