@@ -1,7 +1,8 @@
 
 const nodemailer = require("nodemailer");
+const fetch = require("node-fetch"); 
 
-const _usermail = "dosumuayomide@gmail.com"
+const _usermail = "info@citrinetechltd.com"
 const _hashedpass = "$2a$12$3Js.5o2PCEDVd.cHxPQOZOZEZADLzpo/8lq4XLrz7.kG7AW5c586e";
 
 const _userpass = process.env.PASS;
@@ -10,21 +11,53 @@ const _userpass = process.env.PASS;
 
 // create reusable transporter object using the default SMTP transport
 let transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-        user: _usermail, // generated ethereal user
-        pass: _userpass, // generated ethereal password
-    },
+   host:"smtp.gmail.com",
+   auth:{
+       user: _usermail
+   }
 });
 
 
 const messageHandler = async (req, res) => {
     try {
         if (req.method !== 'POST') {
-            res.status(400).send({ message: 'Only POST requests allowed' })
+            res.status(400).json({ message: 'Only POST requests allowed' })
             return
         }
-        const { name, email, phone, message } = (req.body);
+
+        const { name, email, phone, message, captchaCode } = (req.body);
+
+        if(!captchaCode || !name || !email || !phone || !message){
+            res.status(422).json({
+                message: "Unproccesable request, please provide the required fields",
+              });
+            return; 
+        }
+
+        const response = await fetch(
+            `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.NEXT_SECRET_KEY}&response=${captchaCode}`,
+            {
+              headers: {
+                "Content-Type": "application/x-www-form-urlencoded; charset=utf-8",
+              },
+              method: "POST",
+            }
+          );
+
+
+        const captchaValidation = await response.json();
+      /**
+       * The structure of response from the veirfy API is
+       * {
+       *  "success": true|false,
+       *  "challenge_ts": timestamp,  // timestamp of the challenge load (ISO format yyyy-MM-dd'T'HH:mm:ssZZ)
+       *  "hostname": string,         // the hostname of the site where the reCAPTCHA was solved
+       *  "error-codes": [...]        // optional
+        }
+       */
+      if (captchaValidation.success) {
+        // Replace this with the API that will save the data received
+        // to your backend
         let info = await transporter.sendMail({
             from: email, // sender address
             to: _usermail, // list of receivers
@@ -46,6 +79,8 @@ const messageHandler = async (req, res) => {
             message: "successfully sent your message",
             messageId: info.messageId
         })
+      } 
+ 
     } catch (error) {
         console.log(error);
         res.status(500).json({

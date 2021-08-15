@@ -1,8 +1,9 @@
 import { server } from "../../config/config";
 import axios from 'axios';
+import ReCaptcha, { ReCAPTCHA } from "react-google-recaptcha";
 import Spinner from '../Spinner/spinner';
 import ContactStyles from '../../styles/Contact.module.css';
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 
 const Contact = () => {
 
@@ -12,7 +13,9 @@ const Contact = () => {
     const [message, setMessage] = useState("");
     const [errorMessage, setErrorMessage] = useState("");
     const [messageClass, setMessageClass] = useState("danger");
-    const [loadingState, setLoadingState] = useState(false)
+    const [loadingState, setLoadingState] = useState(false);
+
+    const captchaRef = useRef();
 
 
     const inputHandler = (event, type) => {
@@ -37,41 +40,49 @@ const Contact = () => {
         }
     };
 
-    const btnHandler = async (event) => {
+    const btnHandler = (event) => {
+        event.preventDefault();
+        setLoadingState(true);
+        if (name.trim() === "" || email.trim() === "" || message.trim() === "" || phone.trim() === "") {
+            setErrorMessage("kindly complete all fields, then try again");
+
+            setTimeout(() => {
+                setErrorMessage("");
+            }, 3000)
+            return;
+        }
+        captchaRef.current.execute();
+    }
+
+    const captchaHanlder = async (captchaCode) => {
         try {
 
-            event.preventDefault();
-            console.log(server);
-            setLoadingState(true); 
-
-            if (name.trim() === "" || email.trim() === "" || message.trim() === "" || phone.trim() === "") {
-                setErrorMessage("kindly complete all fields, then try again");
-
-                setTimeout(() => {
-                    setErrorMessage("");
-                }, 3000)
+            if (!captchaCode) {
                 return;
             }
+
+
+
 
             const data = {
                 name,
                 email,
                 phone,
-                message
+                message, 
+                captchaCode
             }
-            console.log(data)
             //
-            // let response = await axios.post(`${server}/api/message`,
-            let response = await axios.post(`/api/message`,
+            let response = await axios.post(`http://localhost:3000/api/message`,
+                // let response = await axios.post(`/api/message`,
                 {
                     ...data
                 }
             );
 
-            console.log(response);
+
 
             if (response.status === 200) {
-                setLoadingState|(false);
+                setLoadingState | (false);
                 setErrorMessage("Successfully sent your message");
                 setMessageClass("success")
 
@@ -84,21 +95,23 @@ const Contact = () => {
             setName("");
             setEmail("");
             setMessage("");
+            captchaRef.current.reset();
         } catch (error) {
 
             console.log(error)
 
-            const { response: { data } } = error; 
+            const { response: { data } } = error;
 
             setErrorMessage(data.message);
-                setMessageClass("danger");
-                setLoadingState(false)
-                setTimeout(() => {
-                    setErrorMessage("");
-                }, 3000)
+            setMessageClass("danger");
+            setLoadingState(false)
+            setTimeout(() => {
+                setErrorMessage("");
+            }, 3000)
         }
     }
 
+    console.log(process.env)
 
     return (
         <section className={"p-5 " + ContactStyles.contact}>
@@ -109,7 +122,7 @@ const Contact = () => {
 
 
                         <form onSubmit={btnHandler} className={"text-dark " + ContactStyles.contactForm}>
-                            {errorMessage.trim() !== "" ? <div className={`alert alert-${messageClass} alert-dismissible show `+ ContactStyles.Fade }>{errorMessage}</div> : null}
+                            {errorMessage !== "" ? <div className={`alert alert-${messageClass} alert-dismissible show ` + ContactStyles.Fade}>{errorMessage}</div> : null}
                             <div className="form-group my-2 py-4">
                                 <input value={name} onChange={(ev) => inputHandler(ev, "name")} type="text" className={"form-control my-2 p-2 " + ContactStyles.input} placeholder="Name" />
                                 <label htmlFor="name" className="label">Name</label>
@@ -127,8 +140,12 @@ const Contact = () => {
                                     name="message" id="message" cols="10" rows="8">
                                 </textarea>
                             </div>
+                                <ReCaptcha size="normal"
+                                    sitekey={process.env.NEXT_SITE_KEY} 
+                                    onChange={captchaHanlder} ref={captchaRef} />
+
                             <button type="submit"
-                                className={"btn btn-block p-2 font-weight-bold text-uppercase " + ContactStyles.submitButton}> {loadingState ? <Spinner/> : "Send Message"}</button>
+                                className={"btn btn-block p-2 font-weight-bold text-uppercase " + ContactStyles.submitButton}> {loadingState ? <Spinner /> : "Send Message"}</button>
                         </form>
                     </div>
                 </div>
