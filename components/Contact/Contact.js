@@ -44,10 +44,12 @@ const Contact = () => {
         event.preventDefault();
         setLoadingState(true);
         if (name.trim() === "" || email.trim() === "" || message.trim() === "" || phone.trim() === "") {
+            setLoadingState(false);
             setErrorMessage("kindly complete all fields, then try again");
 
             setTimeout(() => {
                 setErrorMessage("");
+                
             }, 3000)
             return;
         }
