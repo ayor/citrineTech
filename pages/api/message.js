@@ -2,7 +2,7 @@
 const nodemailer = require("nodemailer");
 const fetch = require("node-fetch"); 
 
-const _usermail = "info@citrinetechltd.com"
+const _usermail = "dosumuayomide@gmail.com"
 const _hashedpass = "$2a$12$3Js.5o2PCEDVd.cHxPQOZOZEZADLzpo/8lq4XLrz7.kG7AW5c586e";
 
 const _userpass = process.env.PASS;
@@ -13,7 +13,8 @@ const _userpass = process.env.PASS;
 let transporter = nodemailer.createTransport({
    host:"smtp.gmail.com",
    auth:{
-       user: _usermail
+       user: _usermail,
+       pass: _userpass
    }
 });
 
@@ -55,6 +56,8 @@ const messageHandler = async (req, res) => {
        *  "error-codes": [...]        // optional
         }
        */
+
+        console.log(captchaValidation);
       if (captchaValidation.success) {
         // Replace this with the API that will save the data received
         // to your backend

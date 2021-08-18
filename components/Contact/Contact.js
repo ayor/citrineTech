@@ -59,6 +59,7 @@ const Contact = () => {
     const captchaHanlder = async (captchaCode) => {
         try {
 
+            console.log(captchaCode)
             if (!captchaCode) {
                 return;
             }
