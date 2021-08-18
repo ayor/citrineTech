@@ -70,8 +70,8 @@ const Contact = () => {
                 captchaCode
             }
             //
-            let response = await axios.post(`http://localhost:3000/api/message`,
-                // let response = await axios.post(`/api/message`,
+            // let response = await axios.post(`http://localhost:3000/api/message`,
+                let response = await axios.post(`/api/message`,
                 {
                     ...data
                 }
