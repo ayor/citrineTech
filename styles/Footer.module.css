@@ -9,5 +9,11 @@
     color: #70aed2;
     text-decoration: none;
   }
+
+  @media (max-width: 375px){
+    .Video{
+      width: 300px;
+    }
+  }
   /* end of footer */
   

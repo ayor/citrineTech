@@ -1,0 +1,15 @@
+.ProductHeader{
+background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .3)), url('/img/printer_bkg.jpg') no-repeat center center /cover;
+}
+.ExploreProducts{
+    background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .3)), url('/img/products.jpg') no-repeat center center /cover;
+  background-attachment: fixed;
+}
+
+/* services */
+.ServiceInfo{
+    background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .8)), url('/img/services.jpg') no-repeat center center /cover;
+  background-attachment: fixed;
+}
+
+/* end services */

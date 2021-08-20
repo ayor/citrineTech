@@ -3,7 +3,7 @@ import Link from 'next/link'
 import footerStyles from '../../styles/Footer.module.css'
 
 const Footer = () => (
-    <footer className="bg-dark px-5">
+    <footer className="bg-dark px-2 px-md-5">
         <div className="container-fluid">
             <div className="row text-light py-4">
                 <div className="col-lg-4 col-sm-6">
@@ -49,8 +49,8 @@ const Footer = () => (
                 </div>
                 <div className="col-lg-4 col-sm-6">
                     <h5 className="pb-3">Managed Services</h5>
-                    <div>
-                        <iframe width="350" height="263" src="https://www.youtube.com/embed/PLIfFgq1994" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                    <div >
+                        <iframe width="290" height="253" src="https://www.youtube.com/embed/PLIfFgq1994" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                     </div>
                     <ul className="list-inline">
                         <li className="list-inline-item"><a href="https://www.facebook.com/citrinetech" target="_blank" rel="noreferrer"></a><i className="fa fa-facebook-square text-primary"></i></li>

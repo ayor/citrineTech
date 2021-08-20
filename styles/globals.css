@@ -1,15 +1,6 @@
-/* header styles */
-/* .main-header{
-  font-family: 'Poppins', sans-serif;
-  background:linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.8)), url('./img/background/background.jpg');
-  background-position: center; 
-  background-size: contain; 
-  /* background-color: rgb(7, 7, 7); */
-  /* height:100vh ; */
-  /* z-index: -1; */
- 
-/* } */ 
-
+body{
+  overflow-x: hidden;
+}
 a.nav_link{
   letter-spacing: 4px;
   font-weight: bold;
@@ -217,6 +208,9 @@ body {
    background-attachment: fixed;
 } */
 
+.contact_card{
+   min-height: 360px;
+}
 .contact_card:hover{
     transform: translateY(-8px);
     border-color: #f5593d;

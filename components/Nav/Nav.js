@@ -13,10 +13,11 @@ const Nav = () => (
             <div className={"bg-light " + NavStyles.line2}></div>
             <div className={"bg-light " + NavStyles.line3}></div>
         </button>
-        <div className="collapse navbar-collapse justify-content-end text-uppercase font-weight-bold" id="myNavbar">
+        <div className="collapse navbar-collapse justify-content-end text-uppercase font-weight-bold" 
+        id="myNavbar">
             <ul className="navbar-nav">
                 <li className="nav-item">
-                    <Link href="#" >
+                    <Link href="/" >
                         <a className={`nav-link m-2 ${NavStyles.menuItem}`}>Home</a>
                     </Link>
                 </li>

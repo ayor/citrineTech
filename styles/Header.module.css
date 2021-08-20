@@ -1,12 +1,27 @@
 .header {
   height: 100vh;
-  /* background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)), no-repeat center center /cover; */
+  background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .3)), url('/img/bkg.jpg') no-repeat center center /cover;
+}
+
+/* .btn{
+  animation-name: anim;
+  /* animation-delay: .8s; 
+  animation-fill-mode: backwards;
+  animation-duration: 2s;
+} */
+
+.btn:hover{
+  color: white;
+  animation: btnAnim .2s forwards;
+  transition: all .4s;
+  
 }
 
 .Video {
   position: absolute;
   right: 0;
   bottom: 0;
+  width: 100%;
   max-width: 100%;
   min-height: 100%;
 }
@@ -14,10 +29,10 @@
 /* banner */
 .banner {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
+    top: 35%;
+    left: 48%;
+    /* transform: translate(-30%, -50%); */
+    width: 50%;
   }
   
   .bannerHeading {
@@ -45,6 +60,27 @@
     100% {
       transform: translateX(0);
       opacity: 1;
+    }
+  }
+
+  @keyframes btnAnim {
+    0% {
+      transform: scale(1, 1); 
+    
+    }
+    100% {
+      transform: scale(1.1, 1.2); 
+    }
+  }
+
+  @media (max-width: 1024px){
+    .banner {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      text-align: center;
     }
   }
   /* end of banner */

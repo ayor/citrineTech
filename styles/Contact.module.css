@@ -7,6 +7,9 @@
   url(/img/contact.jpg) center center /cover;
   background-attachment: fixed;
 }
+.contactCard{
+  min-height: 360px !important;
+}
 
 .contactCard:hover{
    transform: translateY(-8px);

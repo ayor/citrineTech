@@ -1,7 +1,7 @@
 /* navbar */
 .navMenu {
     background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .5));
-    padding: 30px;
+    padding: 2rem;
     transition: all .7s;
   }
 
