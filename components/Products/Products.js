@@ -78,7 +78,7 @@ const Products = () => (
                 </div>
             </div>
 
-            <div className={"row p-3 text-light bg-secondary "}>
+            <div className={"row p-3 text-light bg-dark "}>
                 <div className="col m-4">
                     <h4 className="h4 ">We are a team that exudes a blend of creativity, responsibility,
                     and natural love for solving puzzles through custom-designed solutions for clients from broad spectrums of the industry.
@@ -88,7 +88,7 @@ const Products = () => (
                 </div>
                 <div className={"col m-4 py-4 text-center "}>
                     <Link href="/products">
-                        <a className={"btn btn-info m-2 p-3 "}>See Our products </a>
+                        <a className={"btn btn-warning m-2 p-3 "}>See Our products </a>
                     </Link>
                 </div>
 
