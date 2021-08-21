@@ -81,7 +81,7 @@ const Contact = () => {
 
 
             if (response.status === 200) {
-                setLoadingState | (false);
+                setLoadingState(false);
                 setErrorMessage("Successfully sent your message");
                 setMessageClass("success")
 
