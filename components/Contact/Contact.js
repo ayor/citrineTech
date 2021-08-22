@@ -17,6 +17,8 @@ const Contact = () => {
 
     const captchaRef = useRef();
 
+    console.log(process.env.NEXT_PUBLIC_SITE_KEY)
+
 
     const inputHandler = (event, type) => {
         let val = event.target.value;

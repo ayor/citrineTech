@@ -25,7 +25,7 @@ const messageHandler = async (req, res) => {
             res.status(400).json({ message: 'Only POST requests allowed' })
             return
         }
-
+        
         const { name, email, phone, message, captchaCode } = (req.body);
 
         if(!captchaCode || !name || !email || !phone || !message){
