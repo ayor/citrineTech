@@ -14,7 +14,8 @@ const Index = () => {
     return(
     <>
     <Header
-    title={"Our Products"} 
+    title={"Our Products"}
+    showbtn={false} 
     bannerMessage={`At Cetrine Technologies Limited we deliver on every aspect of a complete Hybrid
      IT solution through any combination of the following products.`}
      /> 

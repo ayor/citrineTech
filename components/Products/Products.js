@@ -1,7 +1,6 @@
 import React from "react";
 import Image from 'next/image';
-import Link from 'next/link';
-import ProductStyles from '../../styles/Products.module.css';
+import Btn from '../Button/Button'
 import PrinterService from '../../public/img/printer.jpg'
 import HospitalService from '../../public/img/hospital.jpg'
 import ErpService from '../../public/img/erp.jpg'
@@ -87,9 +86,7 @@ const Products = () => (
            </h4>
                 </div>
                 <div className={"col m-4 py-4 text-center "}>
-                    <Link href="/products">
-                        <a className={"btn btn-warning m-2 p-3 "}>See Our products </a>
-                    </Link>
+                    <Btn btnHref={"/products"} title={"See Our products"} />
                 </div>
 
             </div>

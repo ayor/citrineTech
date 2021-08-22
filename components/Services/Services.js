@@ -1,6 +1,6 @@
 import React from "react";
 import Styles from '../../styles/Products.module.css'
-import Link from 'next/link';
+import Btn from '../Button/Button';
 
 const Services = () => (
     <section className="p-5  bg-light">
@@ -94,9 +94,7 @@ const Services = () => (
 
                 </div>
                 <div className="col m-4 text-center">
-                    <Link href="/services">
-                        <a className={"btn btn-warning m-2 p-3 "}>Explore Our Services</a>
-                    </Link>
+                    <Btn btnHref={"/services"} title={"Explore Our Services"} />
                 </div>
 
             </div>

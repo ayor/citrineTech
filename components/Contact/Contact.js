@@ -134,13 +134,16 @@ const Contact = () => {
                             </div>
                             <div className="form-group my-2 py-4">
                                 <textarea value={message} onChange={(ev) => inputHandler(ev, "message")} className={"form-control my-2 p-2 " + ContactStyles.textarea} placeholder="Enter your Message"
-                                    name="message" id="message" cols="10" rows="8">
+                                    name="message" id="message" cols="10" rows="6">
                                 </textarea>
                             </div>
-                                <ReCaptcha size="invisible"
+                            <div className="d-flex justify-content-center">
+                            <ReCaptcha size="compact"
                                     sitekey={process.env.NEXT_PUBLIC_SITE_KEY} 
                                     onChange={captchaHanlder} ref={captchaRef} />
 
+                            </div>
+                               
                             <button type="submit"
                                 className={"btn btn-block p-2 font-weight-bold text-uppercase " + ContactStyles.submitButton}> {loadingState ? <Spinner /> : "Send Message"}</button>
                         </form>
