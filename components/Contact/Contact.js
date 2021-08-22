@@ -42,7 +42,8 @@ const Contact = () => {
 
     const btnHandler = (event) => {
         event.preventDefault();
-        setLoadingState(true);
+        const captchaValue = captchaRef.current.getValue();
+        console.log(captchaValue);
         if (name.trim() === "" || email.trim() === "" || message.trim() === "" || phone.trim() === "") {
             setLoadingState(false);
             setErrorMessage("kindly complete all fields, then try again");
@@ -53,7 +54,7 @@ const Contact = () => {
             }, 3000)
             return;
         }
-        captchaRef.current.execute();
+        captchaRef.current.executeAysnc();
     }
 
     const captchaHanlder = async (captchaCode) => {
@@ -140,8 +141,9 @@ const Contact = () => {
                             <div className="d-flex justify-content-center">
                             <ReCaptcha size="compact"
                                     sitekey={process.env.NEXT_PUBLIC_SITE_KEY} 
-                                    onChange={captchaHanlder} ref={captchaRef} />
-
+                                    onChange={captchaHanlder} ref={captchaRef} 
+                                     />
+{/* */}
                             </div>
                                
                             <button type="submit"
