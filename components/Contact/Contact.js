@@ -139,7 +139,7 @@ const Contact = () => {
                                 </textarea>
                             </div>
                             <div className="d-flex justify-content-center">
-                            <ReCaptcha size="compact"
+                            <ReCaptcha size="normal"
                                     sitekey={process.env.NEXT_PUBLIC_SITE_KEY} 
                                     onChange={captchaHanlder} ref={captchaRef} 
                                      />
