@@ -12,4 +12,16 @@ background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .3)), url('/img/pri
   background-attachment: fixed;
 }
 
+.ServiceCard{
+  cursor: pointer;
+  min-height: 363px;
+
+}
+
+.ServiceCard:hover{
+  background-color: rgba(87, 113, 153, 0.829);
+  color: white;
+  transition: all .3s;
+}
+
 /* end services */

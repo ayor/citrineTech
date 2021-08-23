@@ -3,28 +3,15 @@ import Image from 'next/image';
 import ProductStyles from '../../../styles/Products.module.css';
 
 const Product = ({ image, header, text }) => (
-    <header >
-        <div className="row ">
-            <div className="col p-5 d-flex justify-content-center">
-                <div className="row">
-                    <div className="col p-4">
-                        <Image src={image} className="img img-fluid rounded" height="1500" />
-                    </div>
-                    <div className="col  ">
-                        <div className="p-5 w-75">
-                            <h2 className="display-4 font-weight-bolder ">{header}</h2>
+    <div className="col-md-5 col-lg-3 text-center">
+    <div className="card contact_card m-1">
 
-                            <p className="lead "> {text}
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
+        <Image className=" card-img-top  img-fluid mb-3" alt={`A printer with a caption saying ${header}`} src={image} />
+        <div className="card-body">
+            <p className="text-muted card-text">{text}.</p>
         </div>
-    </header>
+    </div>
+</div>
 );
 
 export default Product;

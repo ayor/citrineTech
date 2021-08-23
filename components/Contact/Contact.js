@@ -17,9 +17,6 @@ const Contact = () => {
 
     const captchaRef = useRef();
 
-    console.log(process.env.NEXT_PUBLIC_SITE_KEY)
-
-
     const inputHandler = (event, type) => {
         let val = event.target.value;
 
@@ -140,7 +137,7 @@ const Contact = () => {
                                     name="message" id="message" cols="10" rows="6">
                                 </textarea>
                             </div>
-                            <div className="d-flex justify-content-center">
+                            <div className="d-flex mb-3 justify-content-center">
                             <ReCaptcha size="normal"
                                     sitekey={process.env.NEXT_PUBLIC_SITE_KEY} 
                                     onChange={captchaHanlder} ref={captchaRef} 
