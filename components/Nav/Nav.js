@@ -1,12 +1,18 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import NavStyles from '../../styles/Nav.module.css';
 
-const Nav = () => (
+const Nav = () => {
+    const [activeState, setActiveState] = useState()
+    useEffect(()=>{
+
+    })
+
+    return(
     <nav className={"navbar navbar-expand-lg fixed-top " + NavStyles.navMenu}>
         <a href="#" className="navbar-brand text-light text-uppercase">
-            <Image src={"https://citrinetechltd.com/wp-content/uploads/2020/10/Citrine-logo-NEW.png"} width="60"  height="60" alt="citrinetech"/>
+            <Image src={"https://citrinetechltd.com/wp-content/uploads/2020/10/Citrine-logo-NEW.png"} width="60" loading="lazy"  height="60" alt="citrinetech"/>
         </a>
         <button className="navbar-toggler nav-button" type="button" data-toggle="collapse" data-target="#myNavbar">
             <div className={"bg-light " + NavStyles.line1}></div>
@@ -49,5 +55,5 @@ const Nav = () => (
         </div>
     </nav>
 
-)
+)}
 export default Nav;
