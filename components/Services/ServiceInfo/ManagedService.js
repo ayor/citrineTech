@@ -40,6 +40,7 @@ const ManagedService = (props) => {
             <Image src="https://citrinetechltd.com/wp-content/uploads/2018/01/mab.png" 
             width="400"
             height="150"
+            alt="Managed IT Services"
             loading="lazy" />
             </div>
                 You can have it all. Lower cost, flexible resource management and use, fast and easy remote site additions and changes.
