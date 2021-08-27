@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-      <Script src="https://use.fontawesome.com/225871c0fe.js"></Script>
+      <script src="https://use.fontawesome.com/225871c0fe.js"></script>
         <meta charSet="UTF-8" />
         <meta lang="en-us" />
         <meta name="description" content="Citrine Technologies Ltd (Citrine) is an IT company that offers timely services as

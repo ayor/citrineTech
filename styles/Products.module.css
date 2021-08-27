@@ -7,7 +7,7 @@ background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .3)), url('/img/pri
 }
 
 /* services */
-.ServiceInfo{
+.ServiceBanner{
     background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .8)), url('/img/services.jpg') no-repeat center center /cover;
   background-attachment: fixed;
 }
@@ -19,9 +19,27 @@ background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .3)), url('/img/pri
 }
 
 .ServiceCard:hover{
-  background-color: rgba(87, 113, 153, 0.829);
+  background-color: rgba(52, 117, 214, 0.808);
   color: white;
   transition: all .3s;
 }
+
+.ServiceInfo{
+  animation: slide-in-down ease 1s ;
+  transition: all;
+}
+
+
+@keyframes slide-in-down{
+  0%{
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 /* end services */

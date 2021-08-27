@@ -1,10 +1,11 @@
 import React from "react";
-import Styles from '../../styles/Products.module.css'
+import styles from '../../../styles/Products.module.css'
 
-const Info = (props) => {
-    <div className="row border-top my-2 ">
+const Info = (props) => (
+<div className={styles.ServiceInfo}>
+{props.children}
+</div>
+);
 
-    </div>
-}
+export default Info;
 
-export default Info; 
