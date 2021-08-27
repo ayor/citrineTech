@@ -7,7 +7,6 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-      <script src="https://use.fontawesome.com/225871c0fe.js"></script>
         <meta charSet="UTF-8" />
         <meta lang="en-us" />
         <meta name="description" content="Citrine Technologies Ltd (Citrine) is an IT company that offers timely services as
@@ -23,7 +22,9 @@ function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>CITRINE Technologies Limited</title>
       </Head>
-      <Layout>
+      <Layout>      
+        <Script src="https://use.fontawesome.com/225871c0fe.js" />
+        <Script id="hs-script-loader" async defer src="//js.hs-scripts.com/2761242.js" />
         <Component {...pageProps} />
       </Layout>
     </>)
