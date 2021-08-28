@@ -18,7 +18,7 @@ const Header = ({title, bannerMessage, showbtn}) => {
             <h1 className={"display-4 " + HeaderStyles.bannerHeading}>{headerTitle}</h1>
             <p className={"lead text-dark " + HeaderStyles.bannerPar}>{headerMessage}</p>
  
-           { showbtn ?  <Btn btnHref={"#products"} title={"Contact Us"} />: null }
+           { showbtn ?  <Btn btnHref={"#contact"} title={"Contact Us"} />: null }
             
         </div>
     </header>

@@ -12,7 +12,7 @@ export const data = [
         IT infrastructure up and running and your people and business productive
         `,
         component: <ManagedService/>,
-        iconName:"hands-helping"
+        iconName:"cogs"
     },
     {
         id: Math.random() * Math.random() * 50000,
@@ -23,7 +23,8 @@ export const data = [
         secure.
         `,
         component: <ProjectManagement/>,
-        iconName:"cogs"
+        
+        iconName:"hands-helping"
     },
     {
         id: Math.random() * Math.random() * 70000,

@@ -5,8 +5,18 @@
     transition: all .7s;
   }
 
-  .navMenu:active{
-    color: #ffc107;
+  .navItem{
+    color: #ffc107 !important;
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: color .5s;
+  }
+
+  .navItem:hover{
+    color: #f2f2f2;
+  }
+  .navItem:active{
+    color: #ffc107 !important;
   }
   
   .menuItem {

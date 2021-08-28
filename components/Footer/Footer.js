@@ -15,7 +15,7 @@ const Footer = () => (
                     Protection,
                             Preparedness, and Productivity.</p>
                 </div>
-                <div className="col-lg-2 col-sm-6">
+                <div className="col-lg-4 col-sm-6">
                     <h5 className="pb-3">Visit Us</h5>
                     <ul className="list-unstyled">
                         <li className="m-2">
@@ -29,25 +29,12 @@ const Footer = () => (
                         <li className="m-2">
                             <span className={footerStyles.footerLink}> <i className="fa fa-mobile mr-2"></i> <span>09020002155</span></span>
                         </li>
-                    </ul>
-                </div>
-                <div className="col-lg-2 col-sm-6">
-                    <h5 className="pb-3">Need Help?</h5>
-                    <ul className="list-unstyled">
-                        <li className="m-2">
-                            <Link href="/" className={"text-uppercase " + footerStyles.footerLink}>Customer Service</Link>
-                        </li>
-                        <li className="m-2">
-                            <Link href="/online" className={"text-uppercase " + footerStyles.footerLink}>Online Chat</Link>
-                        </li>
-                        <li className="m-2">
-                            <Link href="/support" className={"text-uppercase " + footerStyles.footerLink}>Support</Link>
-                        </li>
                         <li className="m-2">
                             <Link href="mailto:info@citrinetechltd.com" className="text-info">info@citrinetechltd.com</Link>
                         </li>
                     </ul>
                 </div>
+                
                 <div className="col-lg-4 col-sm-6">
                     <h5 className="pb-3">Managed Services</h5>
                     <div className="embed-responsive embed-responsive-16by9">
