@@ -11,7 +11,8 @@ export const data = [
         provides  a range of proactive services to keep your computer systems,
         IT infrastructure up and running and your people and business productive
         `,
-        component: <ManagedService/>
+        component: <ManagedService/>,
+        iconName:"hands-helping"
     },
     {
         id: Math.random() * Math.random() * 50000,
@@ -21,7 +22,8 @@ export const data = [
         and how you can reduce the threats you face and become both cyber aware and cyber
         secure.
         `,
-        component: <ProjectManagement/>
+        component: <ProjectManagement/>,
+        iconName:"cogs"
     },
     {
         id: Math.random() * Math.random() * 70000,
@@ -30,7 +32,8 @@ export const data = [
         with an open source systems & appliances addressing a wide range of call centre/contact centre
             solutions & enterprises solutions.
         `,
-        component: <Telephony/>
+        component: <Telephony/>,
+        iconName:"satellite-dish"
     },
     {
         id: Math.random() * Math.random() * 20000,
@@ -43,6 +46,7 @@ export const data = [
         business innovation to create new ways of operating and growing businesses.ces addressing a wide range of call centre/contact centre
             solutions & enterprises solutions.
         `,
-        component: <EnterpriseAutomation/>
+        component: <EnterpriseAutomation/>,
+        iconName:"robot"
     },
 ]

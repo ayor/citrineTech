@@ -1,5 +1,4 @@
 .header {
-  height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .3)), url('/img/bkg.jpg') no-repeat center center /cover;
 }
 

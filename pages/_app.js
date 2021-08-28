@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps }) {
         <title>CITRINE Technologies Limited</title>
       </Head>
       <Layout>      
-        <Script src="https://use.fontawesome.com/225871c0fe.js" />
+        <Script src="https://kit.fontawesome.com/2b33a4ca20.js" crossorigin="anonymous" />
         <Script id="hs-script-loader" async defer src="//js.hs-scripts.com/2761242.js" />
         <Component {...pageProps} />
       </Layout>

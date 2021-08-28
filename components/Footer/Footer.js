@@ -18,39 +18,40 @@ const Footer = () => (
                 <div className="col-lg-2 col-sm-6">
                     <h5 className="pb-3">Visit Us</h5>
                     <ul className="list-unstyled">
-                        <li>
-                            <span className={footerStyles.footerLink}> <i className="fa fa-home"></i>14, Gbelegbo Street
+                        <li className="m-2">
+                            <span className={footerStyles.footerLink}> <i className="fa fa-home mr-2"></i> <span>14, Gbelegbo Street
                                     Magodo, Lagos State.</span>
+                                    </span>
                         </li>
-                        <li>
-                            <span className={footerStyles.footerLink}>01-2292700</span>
+                        <li className="m-2">
+                            <span className={footerStyles.footerLink}> <i className="fa fa-phone mr-2"></i> <span>01-2292700</span></span>
                         </li>
-                        <li>
-                            <span className={footerStyles.footerLink}>09020002155</span>
+                        <li className="m-2">
+                            <span className={footerStyles.footerLink}> <i className="fa fa-mobile mr-2"></i> <span>09020002155</span></span>
                         </li>
                     </ul>
                 </div>
                 <div className="col-lg-2 col-sm-6">
                     <h5 className="pb-3">Need Help?</h5>
                     <ul className="list-unstyled">
-                        <li>
+                        <li className="m-2">
                             <Link href="/" className={"text-uppercase " + footerStyles.footerLink}>Customer Service</Link>
                         </li>
-                        <li>
+                        <li className="m-2">
                             <Link href="/online" className={"text-uppercase " + footerStyles.footerLink}>Online Chat</Link>
                         </li>
-                        <li>
+                        <li className="m-2">
                             <Link href="/support" className={"text-uppercase " + footerStyles.footerLink}>Support</Link>
                         </li>
-                        <li>
+                        <li className="m-2">
                             <Link href="mailto:info@citrinetechltd.com" className="text-info">info@citrinetechltd.com</Link>
                         </li>
                     </ul>
                 </div>
                 <div className="col-lg-4 col-sm-6">
                     <h5 className="pb-3">Managed Services</h5>
-                    <div >
-                        <iframe width="290" height="253" src="https://www.youtube.com/embed/PLIfFgq1994" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                    <div className="embed-responsive embed-responsive-16by9">
+                        <iframe className="embed-responsive-item mr-2"  src="https://www.youtube.com/embed/PLIfFgq1994" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                     </div>
                     <ul className="list-inline">
                         <li className="list-inline-item"><a href="https://www.facebook.com/citrinetech" target="_blank" rel="noreferrer"></a><i className="fa fa-facebook-square text-primary"></i></li>
