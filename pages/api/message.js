@@ -43,7 +43,7 @@ const messageHandler = async (req, res) => {
         },
         method: "POST",
         body: {
-          secret: process.env.NEXT_PUBLIC_SECRET_KEY,
+          secret: process.env.NEXT_PUBLIC_SITE_KEY,
           response: captchaCode
         }
 
