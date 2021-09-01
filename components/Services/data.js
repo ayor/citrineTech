@@ -2,6 +2,7 @@ import EnterpriseAutomation from './ServiceInfo/EnterpriseAutomation';
 import ManagedService from "./ServiceInfo/ManagedService";
 import ProjectManagement from "./ServiceInfo/ProjectManagement";
 import Telephony from "./ServiceInfo/Telephony";
+import Styles from '../../styles/Products.module.css'
 
 export const data = [
     {
@@ -12,7 +13,8 @@ export const data = [
         IT infrastructure up and running and your people and business productive
         `,
         component: <ManagedService/>,
-        iconName:"cogs"
+        iconName:"cogs",
+        classKey: Styles.ServiceCard4
     },
     {
         id: Math.random() * Math.random() * 50000,
@@ -24,7 +26,8 @@ export const data = [
         `,
         component: <ProjectManagement/>,
         
-        iconName:"hands-helping"
+        iconName:"hands-helping",
+        classKey:Styles.ServiceCard3
     },
     {
         id: Math.random() * Math.random() * 70000,
@@ -34,7 +37,8 @@ export const data = [
             solutions & enterprises solutions.
         `,
         component: <Telephony/>,
-        iconName:"satellite-dish"
+        iconName:"satellite-dish",
+        classKey:Styles.ServiceCard2
     },
     {
         id: Math.random() * Math.random() * 20000,
@@ -48,6 +52,7 @@ export const data = [
             solutions & enterprises solutions.
         `,
         component: <EnterpriseAutomation/>,
-        iconName:"robot"
+        iconName:"robot",
+        classKey:Styles.ServiceCard1
     },
 ]

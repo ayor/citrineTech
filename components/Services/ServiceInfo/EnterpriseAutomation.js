@@ -7,7 +7,7 @@ const EnterpriseAutomation = (props) => {
 
             <div className="d-flex">
                 <div className="p-3">
-                    <h3>Enterprise Automation</h3>
+                    <h3 className="display-5">Enterprise Automation</h3>
                     <div className="">
                         <p>Forward-thinking business leaders are challenging their organisations to achieve transformation by harnessing digital technologies with organisational, operational, and business innovation to create new ways of operating and growing businesses. Optimizing IT infrastructure and operational processes through automation is key to successfully achieving digital transformation.</p>
                         <p>At Citrine, we can help achieve this transformation with enterprise solution that deliver automation. We have developed, and partnered with the best tools in the market to deliver this automation.</p>

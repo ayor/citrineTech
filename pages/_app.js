@@ -3,7 +3,21 @@ import Head from "next/head";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Layout from '../components/Layout';
 import Script from 'next/script';
+import { useEffect } from "react";
+
 function MyApp({ Component, pageProps }) {
+  useEffect(() => {
+    const threeScript = document.createElement("script");
+    threeScript.setAttribute("id", "threeScript");
+    threeScript.setAttribute("src", "https://cdnjs.cloudflare.com/ajax/libs/three.js/r119/three.min.js");
+    document.getElementsByTagName("head")[0].appendChild(threeScript);
+
+    return () => {
+      if(threeScript){
+        threeScript.remove();
+      }
+    }
+  })
   return (
     <>
       <Head>
@@ -22,9 +36,12 @@ function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>CITRINE Technologies Limited</title>
       </Head>
-      <Layout>      
+      <Layout>
         <Script src="https://kit.fontawesome.com/2b33a4ca20.js" crossorigin="anonymous" />
         <Script id="hs-script-loader" async defer src="//js.hs-scripts.com/2761242.js" />
+        <Script src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_SITE_KEY}`}></Script>
+        {/* <Script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.waves.min.js"></Script> */}
+
         <Component {...pageProps} />
       </Layout>
     </>)

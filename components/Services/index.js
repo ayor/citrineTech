@@ -3,6 +3,7 @@ import Header from '../Header/Header';
 import Services from "./Services";
 import ManagedService from "./ServiceInfo/ManagedService";
 import Automation from "./ServiceInfo/EnterpriseAutomation";
+import Telephony from "./ServiceInfo/Telephony";
 import ProjectManagement from "./ServiceInfo/ProjectManagement";
 const Index = props => (
     <>
@@ -14,6 +15,7 @@ const Index = props => (
         <Services />
         <ManagedService />
         <ProjectManagement />
+        <Telephony />
         <Automation />
     </>
 );

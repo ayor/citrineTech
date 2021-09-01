@@ -6,6 +6,12 @@ background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .3)), url('/img/pri
   background-attachment: fixed;
 }
 
+.ServiceHeaderText{
+  animation: slide-in-right .7s backwards;
+  animation-timing-function: ease-in;
+  animation-iteration-count: initial;
+}
+
 /* services */
 .ServiceBanner{
     background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .8)), url('/img/services.jpg') no-repeat center center /cover;
@@ -15,26 +21,63 @@ background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .3)), url('/img/pri
 .ServiceCard{
   cursor: pointer;
   min-height: 363px;
+}
 
+.ServiceCard1, .ServiceCard2, .ServiceCard3, .ServiceCard4{
+  animation: slide-in-right 1s ease;
+}
+.ServiceCard2{
+animation-delay: .2s;
+animation-fill-mode: backwards;
+}
+.ServiceCard3{
+  animation-delay: .4s;
+  animation-fill-mode: backwards;
+}
+.ServiceCard4{
+  animation-delay: .6s;
+  animation-fill-mode: backwards;
 }
 
 .ServiceCard:hover{
-  background-color: #ffc107;
-  color: white;
+  background-color: #b3b343;
+  color: white !important;
   transition: all .3s;
 }
 
 .ServiceInfo{
-  animation: slide-in-down ease .5s ;
+  animation: slide-in-down ease 1s backwards;
   transition: all;
+  
 }
 
 
+@keyframes slide-in-right{
+  0%{
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slide-in-left{
+  0%{
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 @keyframes slide-in-down{
   0%{
     opacity: 0;
     transform: translateY(-100px);
   }
+
   100%{
     opacity: 1;
     transform: translateY(0);

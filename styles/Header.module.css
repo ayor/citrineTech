@@ -1,5 +1,6 @@
 .header {
-  background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .3)), url('/img/bkg.jpg') no-repeat center center /cover;
+  background: #b3b343 no-repeat center center /cover;
+  height: 100vh;
 }
 
 /* .btn{
@@ -29,17 +30,19 @@
 .banner {
     position: absolute;
     top: 35%;
-    left: 48%;
+    left: 5%;
     /* transform: translate(-30%, -50%); */
     width: 50%;
   }
   
   .bannerHeading {
+    font-weight: bolder;
     animation-name: anim;
     animation-duration: 2s;
   }
   
   .bannerPar {
+    font-weight: bold;
     animation-name: anim;
     animation-duration: 2s;
     animation-delay: .5s;

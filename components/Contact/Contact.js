@@ -38,76 +38,76 @@ const Contact = () => {
                 break;
         }
     };
+    const grepCatch =  () => {
+            grecaptcha.ready(() => {
+                    grecaptcha.execute(process.env.NEXT_PUBLIC_SITE_KEY, { action: 'submit' })
+                    .then(token => {
 
-    const btnHandler = (event) => {
+                    const data = {
+                        name,
+                        email,
+                        phone,
+                        message,
+                        captchaCode: token
+                    }
+
+                    //
+                    axios.post(`http://localhost:3000/api/message`,
+                        // let response = await axios.post(`/api/message`,
+                        {
+                            ...data
+                        }
+                    ).then(response => {
+                        debugger
+
+                        if (response.status === 200) {
+                            setLoadingState(false);
+                            setErrorMessage("Successfully sent your message");
+                            setMessageClass("success")
+    
+                            setTimeout(() => {
+                                setErrorMessage("");
+                            }, 3000)
+    
+                        }
+    
+                        setName("");
+                        setEmail("");
+                        setMessage("");
+                    }).catch(error=>{
+                        console.log(error)
+
+                        const { response: { data } } = error;
+            
+                        setErrorMessage(data.message);
+                        setMessageClass("danger");
+                        setLoadingState(false)
+                        setTimeout(() => {
+                            setErrorMessage("");
+                        }, 3000)
+                    })
+                })
+            })
+        } 
+    
+    const submitHandler = (event) => {
         event.preventDefault();
-        const captchaValue = captchaRef.current.getValue();
-        console.log(captchaValue);
+
         if (name.trim() === "" || email.trim() === "" || message.trim() === "" || phone.trim() === "") {
             setLoadingState(false);
             setErrorMessage("kindly complete all fields, then try again");
 
             setTimeout(() => {
                 setErrorMessage("");
-                
+
             }, 3000)
             return;
         }
-        captchaRef.current.executeAysnc();
+        grepCatch();
     }
 
-    const captchaHanlder = async (captchaCode) => {
-        try {
+    const captchaHanlder = async (event, captchaCode) => {
 
-            console.log(captchaCode)
-            if (!captchaCode) {
-                return;
-            }
-            const data = {
-                name,
-                email,
-                phone,
-                message, 
-                captchaCode
-            }
-            //
-            // let response = await axios.post(`http://localhost:3000/api/message`,
-                let response = await axios.post(`/api/message`,
-                {
-                    ...data
-                }
-            );
-
-
-
-            if (response.status === 200) {
-                setLoadingState(false);
-                setErrorMessage("Successfully sent your message");
-                setMessageClass("success")
-
-                setTimeout(() => {
-                    setErrorMessage("");
-                }, 3000)
-
-            }
-
-            setName("");
-            setEmail("");
-            setMessage("");
-            captchaRef.current.reset();
-        } catch (error) {
-
-            console.log(error)
-
-            const { response: { data } } = error;
-
-            setErrorMessage(data.message);
-            setMessageClass("danger");
-            setLoadingState(false)
-            setTimeout(() => {
-                setErrorMessage("");
-            }, 3000)
-        }
     }
 
     return (
@@ -117,8 +117,8 @@ const Contact = () => {
                     <div className="col  pb-4">
                         <h2 className="display-4 text-center mb-5 text-warning">Get In Touch</h2>
 
-
-                        <form onSubmit={btnHandler} className={"text-dark " + ContactStyles.contactForm}>
+                        {/* onSubmit={btnHandler}  */}
+                        <form onSubmit={submitHandler} className={"text-dark " + ContactStyles.contactForm}>
                             {errorMessage !== "" ? <div className={`alert alert-${messageClass} alert-dismissible show ` + ContactStyles.Fade}>{errorMessage}</div> : null}
                             <div className="form-group my-2 py-4">
                                 <input value={name} onChange={(ev) => inputHandler(ev, "name")} type="text" className={"form-control my-2 p-2 " + ContactStyles.input} placeholder="Name" />
@@ -138,15 +138,16 @@ const Contact = () => {
                                 </textarea>
                             </div>
                             <div className="d-flex mb-3 justify-content-center">
-                            <ReCaptcha size="normal"
-                                    sitekey={process.env.NEXT_PUBLIC_SITE_KEY} 
-                                    onChange={captchaHanlder} ref={captchaRef} 
-                                     />
-{/* */}
+                                {/* <ReCaptcha size="normal"
+                                    sitekey={process.env.NEXT_PUBLIC_SITE_KEY}
+                                    onChange={captchaHanlder} ref={captchaRef}
+                                /> */}
+                                {/* */}
                             </div>
-                               
+
                             <button type="submit"
-                                className={"btn btn-block p-2 font-weight-bold text-uppercase " + ContactStyles.submitButton}> {loadingState ? <Spinner /> : "Send Message"}</button>
+                                className={"btn btn-block p-2 font-weight-bold text-uppercase " + ContactStyles.submitButton}>
+                                {loadingState ? <Spinner /> : "Send Message"}</button>
                         </form>
                     </div>
                 </div>
@@ -156,8 +157,3 @@ const Contact = () => {
 }
 
 export default Contact;
-
-
-
-
-

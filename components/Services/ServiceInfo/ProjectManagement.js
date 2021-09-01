@@ -4,7 +4,7 @@ import Image from 'next/image';
 // import Styles from '../../styles/Products.module.css'
 
 const ProjectManagement = (props) => {
-    return (<div className="row border-top text-muted p-5 ">
+    return (<div className="row border-top  p-5 ">
         <div className="col p-3">
 
             <div className="d-flex">

@@ -3,7 +3,7 @@ import Image from 'next/image';
 // import Styles from '../../styles/Products.module.css'
 
 const ManagedService = (props) => {
-    return (<div className="row border-top bg-light p-5 ">
+    return (<div className="row border-top  p-5 ">
         <div className="col p-3">
             <h3 className="display-5">Managed IT Services</h3>
             <div className="d-flex">
