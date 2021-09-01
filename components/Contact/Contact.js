@@ -15,7 +15,6 @@ const Contact = () => {
     const [messageClass, setMessageClass] = useState("danger");
     const [loadingState, setLoadingState] = useState(false);
 
-    const captchaRef = useRef();
 
     const inputHandler = (event, type) => {
         let val = event.target.value;
@@ -74,6 +73,7 @@ const Contact = () => {
                         setName("");
                         setEmail("");
                         setMessage("");
+                        setPhone("");
                     }).catch(error=>{
                         console.log(error)
 

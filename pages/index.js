@@ -13,10 +13,10 @@ export default function Home() {
 
   const handleScroll = (event) => {
     const val = window.scrollY ; 
-    // console.log(window.scrollY);
+    console.log(window.scrollY);
    
 
-    if (val >= 770) {
+    if (val >= 680) {
       
       setTxtClasses([...txtClass, ServiceStyle.ServiceInfo]);
     } else {

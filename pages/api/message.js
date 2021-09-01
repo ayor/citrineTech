@@ -48,18 +48,20 @@ const messageHandler = async (req, res) => {
 
 
     const captchaValidation = await response.json();
-    console.log(captchaValidation)
     /**
      * The structure of response from the veirfy API is
      * {
-     *  "success": true|false,
-     *  "challenge_ts": timestamp,  // timestamp of the challenge load (ISO format yyyy-MM-dd'T'HH:mm:ssZZ)
-     *  "hostname": string,         // the hostname of the site where the reCAPTCHA was solved
-     *  "error-codes": [...]        // optional
-      }
+     *   "success": true|false,      // whether this request was a valid reCAPTCHA token for your site
+     *   "score": number             // the score for this request (0.0 - 1.0)
+     *   "action": string            // the action name for this request (important to verify)
+     *   "challenge_ts": timestamp,  // timestamp of the challenge load (ISO format yyyy-MM-dd'T'HH:mm:ssZZ)
+     *   "hostname": string,         // the hostname of the site where the reCAPTCHA was solved
+     *   "error-codes": [...]        // optional
+}
      */
 
     if (captchaValidation.success) {
+      if(captchaValidation.score >= process.env.NEXT_THRESHOLD){
       // Replace this with the API that will save the data received
       // to your backend
       // let info = await transporter.sendMail({
@@ -79,20 +81,34 @@ const messageHandler = async (req, res) => {
       // // Preview only available when sending through an Ethereal account
       // console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
 
-      res.status(200).json({
-        message: "successfully sent your message",
-        // messageId: info.messageId
-      })
+        res.status(200).json({
+          message: "successfully sent your message",
+          // messageId: info.messageId
+        })
+      }else{
+        const err =  new Error(); 
+        err.status = 500; 
+        err.message = "Suspicious Entry, please try again later"; 
+        throw err; 
+      }
     } else {
-      throw new Error("invalid Secret ")
+      throw new Error("invalid Secret Code")
     }
 
   } catch (error) {
     console.log(error);
-    res.status(500).json({
-      message: "An error occured while sending your email, kindly try again",
-      error
-    })
+    if(error.status){
+      res.status(error.status).json({
+        message: error.message,
+        error
+      })
+    }else{
+      res.status(500).json({
+        message: "An error occured while sending your email, kindly try again",
+        error
+      })
+    }
+   
   }
 }
 
