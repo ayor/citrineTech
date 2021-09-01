@@ -36,17 +36,13 @@ const messageHandler = async (req, res) => {
     }
 
     const response = await fetch(
-      `https://www.google.com/recaptcha/api/siteverify`,
+      `https://www.google.com/recaptcha/api/siteverify?secret=${NEXT_PUBLIC_SECRET_KEY}&response=${captchaCode}
+      `,
       {
         headers: {
           "Content-Type": "application/x-www-form-urlencoded; charset=utf-8",
         },
         method: "POST",
-        body: {
-          secret: process.env.NEXT_PUBLIC_SITE_KEY,
-          response: captchaCode
-        }
-
       }
     );
 
