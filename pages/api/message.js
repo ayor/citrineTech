@@ -66,7 +66,7 @@ const messageHandler = async (req, res) => {
       // Replace this with the API that will save the data received
       // to your backend
       let info = await transporter.sendMail({
-          from: email, // sender address
+          from: _usermail, // sender address
           to: _usermail, // list of receivers
           subject: `Message from ${name}<${email}>`, // Subject line
           text: `
