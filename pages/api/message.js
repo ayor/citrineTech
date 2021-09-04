@@ -11,7 +11,7 @@ const _userpass = process.env.PASS;
 
 // create reusable transporter object using the default SMTP transport
 let transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",
+  service: "gmail",
   secure: true,
   auth: {
     user: _usermail,
@@ -93,7 +93,9 @@ const messageHandler = async (req, res) => {
         throw err; 
       }
     } else {
-      throw new Error("invalid Secret Code")
+      let error = new Error("Suspicious entry, please try again with valid credentials");
+      error.status = 500; 
+      throw error;
     }
 
   } catch (error) {
