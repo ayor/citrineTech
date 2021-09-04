@@ -12,6 +12,7 @@ const _userpass = process.env.PASS;
 // create reusable transporter object using the default SMTP transport
 let transporter = nodemailer.createTransport({
   host: "smtp.gmail.com",
+  secure: true,
   auth: {
     user: _usermail,
     pass: _userpass
