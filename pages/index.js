@@ -9,20 +9,26 @@ import ServiceStyle from '../styles/Products.module.css';
 export default function Home() {
   const [ServicesClass, setClasses] = useState(["h2 text-dark text-center font-weight-bold mb-4"]);
   const [txtClass, setTxtClasses] = useState(["lead"]);
+  const [headerTextClass1, setheaderTextClass1] = useState([]);
+  const [headerTextClass2, setheaderTextClass2] = useState([]);
+
 
 
   const handleScroll = (event) => {
-    const val = window.scrollY ; 
+    const val = window.scrollY;
     console.log(window.scrollY);
-   
 
-    if (val >= 680) {
-      
+
+    if (val >= 700) {
       setTxtClasses([...txtClass, ServiceStyle.ServiceInfo]);
-    } else {
+      setheaderTextClass1([ServiceStyle.headerTextClass1]);
+    }
+    else {
       // setIsSet(false);
       setClasses(["h2 text-dark text-center font-weight-bold mb-4"]);
       setTxtClasses(["lead"]);
+      setheaderTextClass1([]);
+      setheaderTextClass2([]);
     }
   }
 
@@ -37,7 +43,8 @@ export default function Home() {
       <Header />
       <Services headerClass={ServicesClass.join(' ')} />
       <ExploreServices textClass={txtClass.join(" ")} />
-      <Products />
+      <Products headerText1={headerTextClass1.join(" ")}
+        headerText2={headerTextClass2.join(" ")} />
       <Contact />
 
     </>

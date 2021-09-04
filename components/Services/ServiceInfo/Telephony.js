@@ -11,7 +11,7 @@ const Telephony = (props) => {
                 <p>We offer a complete cost-effective telephone solution platform with an open source systems &amp; appliances addressing a wide range of call centre/contact centre solutions &amp; enterprises solutions including IVR systems, open source VoIP PBX, call centre dialler, voice dialler, voice logger, automatic call distribution, predictive dialler, hosted dialler, GSM &amp; SMS integration, VoIP call recording, customized line call recording / monitoring / tracking.</p>
                 <p>Our wide range of products is the perfect companion for frequent callers demanding longer talk time.</p>
                 <p>
-                    <Image loading="lazy" className="img img-fluid"
+                    <Image priority={true} className="img img-fluid"
                     src="https://citrinetechltd.com/wp-content/uploads/2018/01/tel.png" 
                     alt="telephony hierachy" width="206" height="194" /></p>
                 <p>Our solutions help:</p>

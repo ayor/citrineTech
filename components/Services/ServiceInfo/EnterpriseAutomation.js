@@ -23,7 +23,7 @@ const EnterpriseAutomation = (props) => {
                     </div>
                 </div>
                 <div>
-                    <Image src="/img/20944170.jpg" alt="automation" loading="lazy" width="2600" height="1800" className="img w-100 m-4 img-fluid" />
+                    <Image src="/img/20944170.jpg" alt="automation" priority={true} width="2600" height="1800" className="img w-100 m-4 img-fluid" />
                 </div>
             </div>
         </div>

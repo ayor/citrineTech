@@ -1,5 +1,5 @@
 .ProductHeader{
-background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .3)), url('/img/printer_bkg.jpg') no-repeat center center /cover;
+background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .9)), url('/img/bkg.jpg') no-repeat center center /cover;
 }
 .ExploreProducts{
     background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .3)), url('/img/products.jpg') no-repeat center center /cover;
@@ -46,9 +46,16 @@ animation-fill-mode: backwards;
 }
 
 .ServiceInfo{
-  animation: slide-in-down ease 1s backwards;
+  animation: slide-in-down ease .7s backwards;
   transition: all;
+  animation-delay: .4s;
   
+}
+.headerTextClass1{
+animation: slide-in-left 1s ease .4s;
+}
+.headerTextClass2{
+  animation: slide-in-right 1s ease;
 }
 
 

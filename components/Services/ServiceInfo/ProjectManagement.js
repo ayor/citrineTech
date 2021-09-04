@@ -9,7 +9,7 @@ const ProjectManagement = (props) => {
 
             <div className="d-flex">
                 <div>
-                    <Image src="/img/security.jpg" loading="lazy" width="2000" 
+                    <Image src="/img/security.jpg" priority={true} width="2000" 
                     alt="Project management"
                     height="2000" className="img w-100 m-4 img-fluid" />
                 </div>

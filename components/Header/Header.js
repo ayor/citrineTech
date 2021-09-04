@@ -18,8 +18,8 @@ const Header = ({ title, bannerMessage, showbtn }) => {
                     color: 0x311e1e,
                     // backgroundColor: 0x848444,
                     backgroundColor: 0xb3b343,
-                    // points: 14.00,
-                    maxDistance: 33.00
+                     points: 15.00,
+                    maxDistance: 30.00
                 })
                 // RING({
                 //     el: myRef.current,
