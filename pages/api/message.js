@@ -68,11 +68,12 @@ const messageHandler = async (req, res) => {
       // to your backend
       let info = await transporter.sendMail({
           from: email, // sender address
-          to: _usermail, // list of receivers
-          subject: `Message from ${name}<${email}>`, // Subject line
-          text: `
+          to: "info@citrinetechltd.com", // list of receivers
+          subject: `Message from Website - 
+          username - ${name} <${email}>`, // Subject line
+          text: ` 
           ${name} with email - <${email}>
-          and Phone number:${phone} said
+          and Phone number:${phone} says:
           ${message} 
           `, // plain text body
       });
