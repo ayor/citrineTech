@@ -52,17 +52,20 @@ animation-fill-mode: backwards;
   
 }
 .headerTextClass1{
-animation: slide-in-left 1s ease .4s;
+animation: slide-in-left 2s ease ;
 }
 .headerTextClass2{
-  animation: slide-in-right 1s ease;
+  animation: slide-in-right 2s ease;
 }
 
+.prodClass{
+  animation: slide-in-up 2s ease;
+}
 
 @keyframes slide-in-right{
   0%{
     opacity: 0;
-    transform: translateX(100px);
+    transform: translate(100px, 100px);
   }
   100%{
     opacity: 1;
@@ -72,17 +75,28 @@ animation: slide-in-left 1s ease .4s;
 @keyframes slide-in-left{
   0%{
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translate(-100px, 100px);
   }
   100%{
     opacity: 1;
-    transform: translateX(0);
+    transform: translate(0,0);
   }
 }
 @keyframes slide-in-down{
   0%{
     opacity: 0;
     transform: translateY(-100px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slide-in-up{
+  0%{
+    opacity: 0;
+    transform: translateY(100px);
   }
 
   100%{

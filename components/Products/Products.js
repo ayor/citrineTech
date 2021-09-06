@@ -10,6 +10,7 @@ const Products = (props) => {
         let periodInd = product.text.indexOf(".")
         return (
             <Product
+                productClass={props.showClass ? product.class : null}
                 key={ind}
                 header={product.header}
                 text={product.text.slice(0, periodInd)}
@@ -25,12 +26,12 @@ const Products = (props) => {
                 <div className="row text-dark text-center">
                     <div className="col m-4">
 
-                        <h2 className={"h2 lead-anim "+ props.headerText1}>
-                            At Cetrine Technologies Limited we deliver on 
+                        <h2 className={"h2 lead-anim " + props.headerText1}>
+                            At Cetrine Technologies Limited we deliver on
                             every aspect of a complete Hybrid
                             IT solution through any
                             combination
-                    of the following products.
+                            of the following products.
                         </h2>
                     </div>
                 </div>
@@ -41,7 +42,7 @@ const Products = (props) => {
 
                 <div className={"row p-3 text-light " + ProductStyle.ProductHeader}>
                     <div className="col m-4">
-                        <p className={"lead "+ props.bannerText}>We are a team that exudes a blend of creativity, responsibility,
+                        <p className={"lead " + props.bannerText}>We are a team that exudes a blend of creativity, responsibility,
                         and natural love for solving puzzles through custom-designed solutions for clients from broad spectrums of the industry.
                         We support clients from virtually every industry out there,
                         be it healthcare, manufacturing, financial services, retail, education, and governments, you name them!

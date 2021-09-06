@@ -2,7 +2,7 @@
 const nodemailer = require("nodemailer");
 const fetch = require("node-fetch");
 
-const _usermail = "dosumuayomide@gmail.com"
+const _usermail = "citrinetechltd@gmail.com"
 const _hashedpass = "$2a$12$3Js.5o2PCEDVd.cHxPQOZOZEZADLzpo/8lq4XLrz7.kG7AW5c586e";
 
 const _userpass = process.env.PASS;
@@ -67,7 +67,7 @@ const messageHandler = async (req, res) => {
       // Replace this with the API that will save the data received
       // to your backend
       let info = await transporter.sendMail({
-          from: _usermail, // sender address
+          from: email, // sender address
           to: _usermail, // list of receivers
           subject: `Message from ${name}<${email}>`, // Subject line
           text: `

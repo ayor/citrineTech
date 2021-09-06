@@ -9,26 +9,28 @@ import ServiceStyle from '../styles/Products.module.css';
 export default function Home() {
   const [ServicesClass, setClasses] = useState(["h2 text-dark text-center font-weight-bold mb-4"]);
   const [txtClass, setTxtClasses] = useState(["lead"]);
-  const [headerTextClass1, setheaderTextClass1] = useState([]);
-  const [headerTextClass2, setheaderTextClass2] = useState([]);
-
-
+  const [showProdClasses, setprodClasses] = useState(false);
+  const [showHeaderText, setheaderTextClass] = useState(false);
 
   const handleScroll = (event) => {
     const val = window.scrollY;
     console.log(window.scrollY);
 
 
-    if (val >= 700) {
-      setTxtClasses([...txtClass, ServiceStyle.ServiceInfo]);
-      setheaderTextClass1([ServiceStyle.headerTextClass1]);
+    if (val >= 720 && val < 900) {
+      setTxtClasses([...txtClass, ]);
+    } else if (val >= 900 && val < 1000) {
+      setheaderTextClass(true)
+    } else if (val >= 1100) {
+      setprodClasses(true);
     }
     else {
       // setIsSet(false);
       setClasses(["h2 text-dark text-center font-weight-bold mb-4"]);
       setTxtClasses(["lead"]);
-      setheaderTextClass1([]);
-      setheaderTextClass2([]);
+      setheaderTextClass(false)
+      setprodClasses(false);
+
     }
   }
 
@@ -43,8 +45,10 @@ export default function Home() {
       <Header />
       <Services headerClass={ServicesClass.join(' ')} />
       <ExploreServices textClass={txtClass.join(" ")} />
-      <Products headerText1={headerTextClass1.join(" ")}
-        headerText2={headerTextClass2.join(" ")} />
+      <Products
+        showHeaderClass={showHeaderText}
+        showClass={showProdClasses}
+      />
       <Contact />
 
     </>

@@ -1,6 +1,7 @@
 import React from "react";
 import { data } from './data';
 import Service from './Service/Service';
+import ServiceStyle from '../../styles/Products.module.css';
 
 
 const Services = (props) => {
@@ -17,7 +18,7 @@ const Services = (props) => {
     return (
         <section className="p-5  bg-light">
             <div className="container-fluid" id="services">
-                <h2 className={props.headerClass}>
+                <h2 className={props.showClass ? ServiceStyle.headerTextClass1 : null}>
                     We deliver on every aspect of a complete Hybrid IT solution through any combination of the following
                 </h2>
                 {_services}
