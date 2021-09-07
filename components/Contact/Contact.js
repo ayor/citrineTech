@@ -57,8 +57,7 @@ const Contact = () => {
                             ...data
                         }
                     ).then(response => {
-                        debugger
-
+                        
                         if (response.status === 200) {
                             setLoadingState(false);
                             setErrorMessage("Successfully sent your message");
@@ -92,6 +91,7 @@ const Contact = () => {
     
     const submitHandler = (event) => {
         event.preventDefault();
+        setLoadingState(true);
 
         if (name.trim() === "" || email.trim() === "" || message.trim() === "" || phone.trim() === "") {
             setLoadingState(false);

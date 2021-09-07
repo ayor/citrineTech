@@ -70,7 +70,7 @@ const messageHandler = async (req, res) => {
           from: email, // sender address
           to: "info@citrinetechltd.com", // list of receivers
           subject: `Message from Website - 
-          username - ${name} <${email}>`, // Subject line
+           ${name} <${email}>`, // Subject line
           text: ` 
           ${name} with email - <${email}>
           and Phone number:${phone} says:

@@ -8,7 +8,7 @@ import ServiceStyle from '../styles/Products.module.css';
 
 export default function Home() {
   const [ServicesClass, setClasses] = useState(["h2 text-dark text-center font-weight-bold mb-4"]);
-  const [txtClass, setTxtClasses] = useState(["lead"]);
+  const [txtClass, setTxtClasses] = useState(false);
   const [showProdClasses, setprodClasses] = useState(false);
   const [showHeaderText, setheaderTextClass] = useState(false);
 
@@ -18,7 +18,7 @@ export default function Home() {
 
 
     if (val >= 720 && val < 900) {
-      setTxtClasses([...txtClass, ]);
+      setTxtClasses(true);
     } else if (val >= 900 && val < 1000) {
       setheaderTextClass(true)
     } else if (val >= 1100) {
@@ -27,7 +27,7 @@ export default function Home() {
     else {
       // setIsSet(false);
       setClasses(["h2 text-dark text-center font-weight-bold mb-4"]);
-      setTxtClasses(["lead"]);
+      setTxtClasses(false);
       setheaderTextClass(false)
       setprodClasses(false);
 
@@ -44,7 +44,7 @@ export default function Home() {
     <>
       <Header />
       <Services headerClass={ServicesClass.join(' ')} />
-      <ExploreServices textClass={txtClass.join(" ")} />
+      <ExploreServices showClass={txtClass} />
       <Products
         showHeaderClass={showHeaderText}
         showClass={showProdClasses}
