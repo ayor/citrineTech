@@ -14,7 +14,6 @@ export default function Home() {
 
   const handleScroll = (event) => {
     const val = window.scrollY;
-    console.log(window.scrollY);
 
 
     if (val >= 720 && val < 900) {
