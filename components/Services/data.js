@@ -1,8 +1,8 @@
-import EnterpriseAutomation from './ServiceInfo/EnterpriseAutomation';
-import ManagedService from "./ServiceInfo/ManagedService";
-import ProjectManagement from "./ServiceInfo/ProjectManagement";
-import Telephony from "./ServiceInfo/Telephony";
-import Styles from '../../styles/Products.module.css'
+import Styles from '../../styles/Products.module.css'; 
+import ManagedService from '../../public/img/services.jpg';
+import Infrastructure from '../../public/img/infrastructure.jpg';
+import Automation from '../../public/img/automation.jpg';
+import Hololense from '../../public/img/hololense.jpg';
 
 export const data = [
     {
@@ -12,9 +12,8 @@ export const data = [
         provides  a range of proactive services to keep your computer systems,
         IT infrastructure up and running and your people and business productive
         `,
-        component: <ManagedService/>,
-        iconName:"cogs",
-        classKey: Styles.ServiceCard4
+        imageSrc: Automation,
+        classKey: [Styles.ServiceCard4 , "col-md-6  "]
     },
     {
         id: Math.random() * Math.random() * 50000,
@@ -24,10 +23,8 @@ export const data = [
         and how you can reduce the threats you face and become both cyber aware and cyber
         secure.
         `,
-        component: <ProjectManagement/>,
-        
-        iconName:"hands-helping",
-        classKey:Styles.ServiceCard3
+        imageSrc: ManagedService,
+        classKey:[Styles.ServiceCard3, "col-md-6 "]
     },
     {
         id: Math.random() * Math.random() * 70000,
@@ -36,9 +33,8 @@ export const data = [
         with an open source systems & appliances addressing a wide range of call centre/contact centre
             solutions & enterprises solutions.
         `,
-        component: <Telephony/>,
-        iconName:"satellite-dish",
-        classKey:Styles.ServiceCard2
+        imageSrc: Hololense,
+        classKey:[Styles.ServiceCard2, , "col-md-6 "]
     },
     {
         id: Math.random() * Math.random() * 20000,
@@ -51,8 +47,7 @@ export const data = [
         business innovation to create new ways of operating and growing businesses.ces addressing a wide range of call centre/contact centre
             solutions & enterprises solutions.
         `,
-        component: <EnterpriseAutomation/>,
-        iconName:"robot",
-        classKey:Styles.ServiceCard1
+        imageSrc: Infrastructure,
+        classKey:[Styles.ServiceCard1, , "col-md-6  "]
     },
 ]

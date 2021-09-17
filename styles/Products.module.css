@@ -51,9 +51,58 @@ animation-fill-mode: backwards;
   animation-delay: .4s;
   
 }
-.headerTextClass1{
-animation: slide-in-left 2s ease ;
+.headerTextClass1, .headerTextClass2{
+  font-family: 'Poppins' sans-serif;
+  font-size: 65px;
+  font-weight: bold;
+  /* text-decoration: underline; */
+/* animation: slide-in-left 2s ease ; */
 }
+.headerTextClass1{
+  border-right: 2px rgba(204, 204, 204, 0.603) solid;
+}
+.Image1, .Image2,  .Image3, .Image4{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+}
+.Image1{
+  background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.6)), url(/img/automation.jpg);
+}
+.Image2{
+  background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.6)), url(/img/services.jpg);
+}
+.Image3{
+  background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.6)), url(/img/support.jpg);
+}
+.Image4{
+  background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.6)), url(/img/infrastructure.jpg);
+}
+
+.ServiceText1{
+  background-color: rgba(242,201,76,0.5);
+  opacity: 0;
+}
+
+.ProductItems{
+  background-color: rgba(242,201,76,0.5);
+  color: #937304;
+  border-radius: 5px;
+  font-size:30px;
+}
+
+.ServiceText1:hover{
+ cursor: pointer;
+ opacity: 1;
+ transition: all .2s;
+}
+
+.ProductsMessage{
+  background-color: #F2C94C;
+}
+
+
 .headerTextClass2{
   animation: slide-in-right 2s ease;
 }

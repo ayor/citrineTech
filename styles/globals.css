@@ -35,9 +35,6 @@ body {
 /* end of header */
 
 /* mission */
-.services {
-  /* background: #0a0c0c; */
-}
 
 .underline {
   width: 150px;
@@ -196,6 +193,7 @@ body {
     opacity: 1;
   }
 }
+
 /*  end of pricing */
 
 /* contact */

@@ -7,46 +7,45 @@ import Contact from "../components/Contact/Contact";
 import ServiceStyle from '../styles/Products.module.css';
 
 export default function Home() {
-  const [ServicesClass, setClasses] = useState(["h2 text-dark text-center font-weight-bold mb-4"]);
-  const [txtClass, setTxtClasses] = useState(false);
-  const [showProdClasses, setprodClasses] = useState(false);
-  const [showHeaderText, setheaderTextClass] = useState(false);
+  // const [ServicesClass, setClasses] = useState(["h2 text-dark text-center font-weight-bold mb-4"]);
+  // const [txtClass, setTxtClasses] = useState(false);
+  // const [showProdClasses, setprodClasses] = useState(false);
+  // const [showHeaderText, setheaderTextClass] = useState(false);
 
-  const handleScroll = (event) => {
-    const val = window.scrollY;
+  // const handleScroll = (event) => {
+  //   const val = window.scrollY;
 
 
-    if (val >= 720 && val < 900) {
-      setTxtClasses(true);
-    } else if (val >= 900 && val < 1000) {
-      setheaderTextClass(true)
-    } else if (val >= 1100) {
-      setprodClasses(true);
-    }
-    else {
-      // setIsSet(false);
-      setClasses(["h2 text-dark text-center font-weight-bold mb-4"]);
-      setTxtClasses(false);
-      setheaderTextClass(false)
-      setprodClasses(false);
+  //   if (val >= 720 && val < 900) {
+  //     setTxtClasses(true);
+  //   } else if (val >= 900 && val < 1000) {
+  //     setheaderTextClass(true)
+  //   } else if (val >= 1100) {
+  //     setprodClasses(true);
+  //   }
+  //   else {
+  //     // setIsSet(false);
+  //     setClasses(["h2 text-dark text-center font-weight-bold mb-4"]);
+  //     setTxtClasses(false);
+  //     setheaderTextClass(false)
+  //     setprodClasses(false);
 
-    }
-  }
+  //   }
+  // }
 
-  useEffect(() => {
-    document.addEventListener("scroll", handleScroll);
-    return () => {
-      document.removeEventListener("scroll", handleScroll)
-    }
-  }, [handleScroll])
+  // useEffect(() => {
+  //   document.addEventListener("scroll", handleScroll);
+  //   return () => {
+  //     document.removeEventListener("scroll", handleScroll)
+  //   }
+  // }, [handleScroll])
   return (
     <>
       <Header />
-      <Services headerClass={ServicesClass.join(' ')} />
-      <ExploreServices showClass={txtClass} />
+      <Services  />
+      <ExploreServices  />
       <Products
-        showHeaderClass={showHeaderText}
-        showClass={showProdClasses}
+        
       />
       <Contact />
 

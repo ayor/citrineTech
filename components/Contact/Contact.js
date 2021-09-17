@@ -1,4 +1,4 @@
-import { server } from "../../config/config";
+import ContactImg from './ContactImg';
 import axios from 'axios';
 import ReCaptcha, { ReCAPTCHA } from "react-google-recaptcha";
 import Spinner from '../Spinner/spinner';
@@ -37,10 +37,10 @@ const Contact = () => {
                 break;
         }
     };
-    const grepCatch =  () => {
-            grecaptcha.ready(() => {
-                    grecaptcha.execute(process.env.NEXT_PUBLIC_SITE_KEY, { action: 'submit' })
-                    .then(token => {
+    const grepCatch = () => {
+        grecaptcha.ready(() => {
+            grecaptcha.execute(process.env.NEXT_PUBLIC_SITE_KEY, { action: 'submit' })
+                .then(token => {
 
                     const data = {
                         name,
@@ -52,32 +52,32 @@ const Contact = () => {
 
                     //
                     // axios.post(`http://localhost:3000/api/message`,
-                     axios.post(`/api/message`,
+                    axios.post(`/api/message`,
                         {
                             ...data
                         }
                     ).then(response => {
-                        
+
                         if (response.status === 200) {
                             setLoadingState(false);
                             setErrorMessage("Successfully sent your message");
                             setMessageClass("success")
-    
+
                             setTimeout(() => {
                                 setErrorMessage("");
                             }, 3000)
-    
+
                         }
-    
+
                         setName("");
                         setEmail("");
                         setMessage("");
                         setPhone("");
-                    }).catch(error=>{
+                    }).catch(error => {
                         console.log(error)
 
                         const { response: { data } } = error;
-            
+
                         setErrorMessage(data.message);
                         setMessageClass("danger");
                         setLoadingState(false)
@@ -86,9 +86,9 @@ const Contact = () => {
                         }, 3000)
                     })
                 })
-            })
-        } 
-    
+        })
+    }
+
     const submitHandler = (event) => {
         event.preventDefault();
         setLoadingState(true);
@@ -106,33 +106,31 @@ const Contact = () => {
         grepCatch();
     }
 
-    const captchaHanlder = async (event, captchaCode) => {
-
-    }
-
     return (
-        <section className={"p-5 " + ContactStyles.contact}>
-            <div className="container-fluid" id="contact">
-                <div className="row ">
-                    <div className="col  pb-4">
-                        <h2 className="display-4 text-center mb-5 text-warning">Get In Touch</h2>
+        // <section className={"p-5 " + ContactStyles.contact}>
+        <section className={"p-5 bg-light border-top"}>
+            <div className="container" id="contact">
+                <div className="text-center p-3 m-2">
+                    <h2 className={" h2 font-weight-bold"}>
+                        Need some more info?
+                </h2>
+                <small className="text-secondary">Send us an e-mail!</small>
+                </div>
 
-                        {/* onSubmit={btnHandler}  */}
+                <div className="row ">
+                    <div className="col  pb-4 col-md-5">
                         <form onSubmit={submitHandler} className={"text-dark " + ContactStyles.contactForm}>
                             {errorMessage !== "" ? <div className={`alert alert-${messageClass} alert-dismissible show ` + ContactStyles.Fade}>{errorMessage}</div> : null}
-                            <div className="form-group my-2 py-4">
+                            <div className="form-group my-2 ">
                                 <input value={name} onChange={(ev) => inputHandler(ev, "name")} type="text" className={"form-control my-2 p-2 " + ContactStyles.input} placeholder="Name" />
-                                <label htmlFor="name" className="label">Name</label>
                             </div>
-                            <div className="form-group my-2 py-4">
+                            <div className="form-group my-2">
                                 <input value={email} onChange={(ev) => inputHandler(ev, "email")} type="email" className={"form-control my-2 p-2 " + ContactStyles.input} placeholder="Email Address" />
-                                <label htmlFor="email" className="label">Email Address</label>
                             </div>
-                            <div className="form-group my-2 py-4">
+                            <div className="form-group my-2">
                                 <input value={phone} onChange={(ev) => inputHandler(ev, "phone")} type="tel" className={"form-control my-2 p-2 " + ContactStyles.input} placeholder="Phone Number" />
-                                <label htmlFor="phone" className="label">Phone Number </label>
                             </div>
-                            <div className="form-group my-2 py-4">
+                            <div className="form-group my-2">
                                 <textarea value={message} onChange={(ev) => inputHandler(ev, "message")} className={"form-control my-2 p-2 " + ContactStyles.textarea} placeholder="Enter your Message"
                                     name="message" id="message" cols="10" rows="6">
                                 </textarea>
@@ -146,9 +144,12 @@ const Contact = () => {
                             </div>
 
                             <button type="submit"
-                                className={"btn btn-block p-2 font-weight-bold text-uppercase " + ContactStyles.submitButton}>
+                                className={"btn btn-block p-2 font-weight-bold text-uppercase  " + ContactStyles.submitButton}>
                                 {loadingState ? <Spinner /> : "Send Message"}</button>
                         </form>
+                    </div>
+                    <div className="col col-md-7 my-3 ">
+                        <ContactImg />
                     </div>
                 </div>
             </div>
