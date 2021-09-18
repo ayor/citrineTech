@@ -23,21 +23,21 @@ const Products = (props) => {
 
     return (
         <>
-            <section className="p-5 products container" id="products">
+            <section className="p-2 products container" id="products">
                 {/* <!-- title --> */}
                 <div className="row text-dark p-3">
-                    <div className="col col-md-5">
-                        <p className="text-secondary">Our products</p>
-                        <h2 className={ProductStyle.headerTextClass2}>Amazing Products you can rely on.</h2>
+                    <div className=" col-md-5 mb-3">
+                        <small className="text-secondary">Our products</small>
+                        <h2 className={ProductStyle.headerTextClass2}>Amazing products you can rely on.</h2>
                     </div>
-                    <div className="col col-md-7 p-0 ">
-                        <div className={"w-100 h-100 p-5 " + ProductStyle.ProductItems}>
+                    <div className=" col-md-7  ">
+                        <div className={"w-100 h-100 " + ProductStyle.ProductItems}>
                             <ul className="list-inline">
-                                <li className="list-item p-3 my-3"><i className="fas fa-check-circle mr"></i> Hospital Management System</li>
-                                <li className="list-item p-3 my-3"><i className="fas fa-check-circle mr"></i> Print Management Solution</li>
-                                <li className="list-item p-3 my-3"><i className="fas fa-check-circle mr"></i> Enterprise Resource Planning Solution</li>
-                                <li className="list-item p-3 my-3"><i className="fas fa-check-circle mr"></i> Document Management Solution</li>
-                                <li className="list-item p-3 my-3"><i className="fas fa-check-circle mr"></i> Corporate Gifting Solution</li>
+                                <li className="list-item p-3 my-1"><i className="fas fa-check-circle mr"></i> Hospital Management System</li>
+                                <li className="list-item p-3 my-1"><i className="fas fa-check-circle mr"></i> Print Management Solution</li>
+                                <li className="list-item p-3 my-1"><i className="fas fa-check-circle mr"></i> Enterprise Resource Planning Solution</li>
+                                <li className="list-item p-3 my-1"><i className="fas fa-check-circle mr"></i> Document Management Solution</li>
+                                <li className="list-item p-3 my-1"><i className="fas fa-check-circle mr"></i> Corporate Gifting Solution</li>
                             </ul>
                         </div>
                     </div>

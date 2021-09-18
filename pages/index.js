@@ -43,7 +43,7 @@ export default function Home() {
     <>
       <Header />
       <Services  />
-      <ExploreServices  />
+      {/* <ExploreServices  /> */}
       <Products
         
       />

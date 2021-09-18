@@ -74,8 +74,13 @@
 }
 
 .contactForm{
-   width: 70%;
+   max-width: 70%;
    margin-left: auto;
+}
+
+.FormImg{
+  width:541px;
+  height:261px;
 }
 
 .headerTextClass{
@@ -85,29 +90,74 @@
 
 }
 
-@media (max-width: 992px) {
- .contact {
-   background: linear-gradient(rgba(21, 31, 32, 1), rgba(21, 31, 32, .95));
- }
 
- .contactForm {
-   width: 80%;
-   margin: auto;
-   color: #f2f2f2;
- }
-}
 
 @keyframes fadein {
   0%{
     opacity: 0;
-   }
+  }
   100%{
     opacity: 1;
-   }
+  }
 }
 /* end of contact */
 
 
+
+
+@media (max-width: 768px) {
+  .contactForm {
+    max-width: 95%;
+   }
+ .FormImg{
+  margin-top: 5%;
+   width: 400px;
+   height: 150px;
+ }}
+@media (max-width: 414px) {
+ .contact {
+   background: linear-gradient(rgba(21, 31, 32, 1), rgba(21, 31, 32, .95));
+ }
+ .FormImg{
+   position: absolute;
+   top: 328%;
+    left: 65%;
+   width: 120px;
+   height: 40px;
+ }
+
+ .contactForm {
+  max-width: 95%;
+margin: auto;
+ }
+}
+@media (max-width: 411px) {
+  .FormImg{
+    top: 302%;
+    left: 63%;
+  }
+}
+@media (max-width: 375px) {
+  .FormImg{
+    top: 311%;
+    left: 65%;
+  }
+}
+@media (max-width: 375px) and (max-height:667px) {
+  .FormImg{
+    top: 357%;
+    left: 65%;
+  }
+}
+@media (max-width: 360px) {
+  .FormImg{
+    position: absolute;
+    top: 365%;
+    left: 65%;
+    width: 100px;
+    height: 38px;
+  }
+}
 
 
 

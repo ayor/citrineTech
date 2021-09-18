@@ -51,6 +51,8 @@
     position: absolute;
     top: 70%;
     left: 14%; 
+    width: 154px;
+    height: 39px;
   }
 
   .WelcomeMessage{
@@ -64,6 +66,11 @@
   .lead_anim{
       animation: anim .8s ease-in backwards;
       transition: all;
+  }
+
+  .headerImageClass{
+    width:900px;
+     height:703px;
   }
   
   @keyframes anim {
@@ -86,15 +93,104 @@
       transform: scale(1.1, 1.2); 
     }
   }
-
   @media (max-width: 1024px){
-    .banner {
+    .headerImageClass{
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 80%;
-      text-align: center;
+      width: 140%;
+      margin-top: 5%;
+      margin-left: 1%;
+    } 
+    .Line{
+      top: 73%;
+      left: 5%;
+      width:120px;
+      height:40px;
     }
   }
+
+
+  @media screen and (max-width: 768px) {
+    .headerImageClass{
+      width: 140%;
+      margin-top: 5%;
+      margin-left: 1%;
+    } 
+    .banner {
+      top: 40%;
+      left: 50%;
+      transform: translate(-70%, -50%);
+      width: 60%;
+      
+    }
+    .bannerHeading{
+      font-size: 30px;
+    }
+    .Line{
+      top: 50%;
+      left: 38%;
+      width:60px;
+      height:12px;
+    }
+  }
+
+  @media screen and (max-width: 414px) {
+
+    .banner {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-60%, -50%);
+      width: 80%;
+      
+    }
+    .Line{
+      top: 55%;
+      left: 38%;
+      width:60px;
+      height:12px;
+    }
+    .bannerHeading{
+      font-size: 20px;
+    }
+    .headerImageClass{
+      position: absolute;
+      width: 170%;
+      margin-top: -90%;
+      margin-left: -15%;
+      z-index: -1;
+    } 
+    .btn{
+      width: 100px;
+      margin-top: 5px;
+      background-color: #F2C94C;
+      border-radius: 50px;
+      font-size: 10px;
+      box-shadow: 1px 2px 2px rgb(158, 157, 157) ;
+    }   
+  }
+ @media screen and (max-width: 375px) {
+  .banner {
+    transform: translate(-60%, -50%);
+    width: 70%;
+  }
+ 
+    .Line{
+      top: 58%;
+      left: 51%;
+      width:60px;
+      height:12px;
+    }
+
+    .headerImageClass{
+      position: absolute;
+      width: 170%;
+      margin-top: -40%;
+      margin-left: -15%;
+    } 
+
+
+  } 
+
+
+
   /* end of banner */

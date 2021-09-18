@@ -53,11 +53,9 @@ const Header = ({ title, bannerMessage, showbtn }) => {
                     <div className="row ">
                         <div className="col ">
                             <div className={"text-dark p-2 " + HeaderStyles.banner}>
-                                <p className="text-secondary mt-2 "> {headerMessage}</p>
+                                <small className="text-secondary mt-2"> {headerMessage}</small>
                                 <h1 className={"font-weight-bold text-dark pl-4 mb-4 " + HeaderStyles.bannerHeading}>{headerTitle}</h1>
-                                <div className={HeaderStyles.Line}>
-                                    <UnderLine />
-                                </div>
+                                <UnderLine />
                                 {showbtn ? <Btn btnHref={"#contact"} title={"Contact Us"} /> : null}
                             </div>
                             <div className={HeaderStyles.HeaderImg}>

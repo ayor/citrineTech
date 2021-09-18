@@ -108,7 +108,7 @@ const Contact = () => {
 
     return (
         // <section className={"p-5 " + ContactStyles.contact}>
-        <section className={"p-5 bg-light border-top"}>
+        <section className={"p-2 bg-light border-top"}>
             <div className="container" id="contact">
                 <div className="text-center p-3 m-2">
                     <h2 className={" h2 font-weight-bold"}>
@@ -148,7 +148,7 @@ const Contact = () => {
                                 {loadingState ? <Spinner /> : "Send Message"}</button>
                         </form>
                     </div>
-                    <div className="col col-md-7 my-3 ">
+                    <div className="col-md-7 my-3 ">
                         <ContactImg />
                     </div>
                 </div>

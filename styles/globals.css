@@ -6,6 +6,7 @@ a.nav_link{
   font-weight: bold;
 }
 
+
 .header-nav-bar{
   background-color: transparent;
 
@@ -315,6 +316,12 @@ body {
   }
   100%{
       transform: translateX(0);
+  }
+}
+
+@media (max-width: 375px){
+  p {
+    font-size: 12px;
   }
 }
 /* services end */
