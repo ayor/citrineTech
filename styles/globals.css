@@ -28,7 +28,10 @@ body {
 
 /* header */
 
-
+h2{
+  font-family: 'Poppins' sans-serif;
+  font-weight: bold;
+}
 
 
 

@@ -35,14 +35,14 @@
 .submitButton {
 
  color: #F2C94C;
- background: #000;
+ background: #262525;
  width: 100%;
  transition: all .3s;
 }
 
 .submitButton:hover {
   background: #F2C94C;
-  color: #000;
+  color: #262525;
   transition: all .3s;
  transform: translateY(-3px);
 }

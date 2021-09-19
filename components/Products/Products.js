@@ -44,18 +44,18 @@ const Products = (props) => {
                 </div>
 
             </section>
-            {/* <section className="container-fluid ">
+             <section className="container-fluid ">
                 <div className="row">
                     <div className="col col-md-4 ">
                         <div className={"w-100 h-100  align-items-center p-2   "+ ProductStyle.ProductsMessage}>
-                            <p className="text-secondary px-4 mb-1 pt-4 m-0"> We are one of the fastest growing solutions provider, a feat that has been fueled by the results we have achieved working with clients in a wide array of niches.</p>
+                            <p className=" px-4 mb-1 pt-4 m-0"> We believe that it’s not just about providing top-notch tech solutions, it’s also about building relationships. Our company is built on our relationships, partnerships, and experiences.</p>
                         <Image src={productImg} width="80" height="80" className="img-fluid rounded-circle"/>
                         </div>
                     </div>
 
                 </div>
 
-            </section> */}
+            </section> 
         </>
     )
 };

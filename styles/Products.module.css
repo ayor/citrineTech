@@ -100,9 +100,13 @@ animation-fill-mode: backwards;
 }
 
 .ProductsMessage{
-  background-color: #F2C94C;
+  color: #F2C94C;
+  background-color: #262525;
 }
-
+.ProductItems > ul > li{
+  font-size: 25px;  
+  margin: 2px 0;
+  }
 
 .headerTextClass2{
   animation: slide-in-right 2s ease;
