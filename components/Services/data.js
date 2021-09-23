@@ -97,20 +97,7 @@ export const data = [
 
         Citrine Technologies Ltd shall develop a methodology of helping you to understand your specific cyber domain, and how you can reduce the threats you face and become both cyber aware and cyber secure. Our Infrastructure Security service will provide your organization with a detailed report on your vulnerabilities and a range of recommendations to help you overcome these issues. 
         
-        This service will not only enable you to become cyber aware but also give you a detailed understanding of cybersecurity and the elements included within it.
-        
-        Our Infrastructure Security service will scrutinize your organization’s existing security precautions to ensure that your internal networks are protected from external attack. 
-        
-        Our team will test for exploitable vulnerabilities in specific machines such as web, database, wireless, and other crucial servers, routers, and firewall appliances.
-
-        Conforming to industry standards such as the Open Source Security Testing Methodology (OSSTM) and by a suite of tools, our service is designed to help your organization stay ahead of emerging threats.
-        
-        Working closely with your IT team, we will review existing risks in connection with the data integrity of the systems, such as the ability to alter or delete data, unauthorized access to resources, and workforce knowledge on information security risks.
-       
-        Vulnerabilities discovered will be flagged for further testing and penetration. To take this a step further, we will launch a series of authorized simulated attacks to identify possible ways in which an intruder can breach your security defenses.
-        
-        Based on the weakness discovered, a corrective measure that conforms to the best practices and approaches will be recommended to close the security gaps in your organization’s infrastructure.
-        `,
+        This service will not only enable you to become cyber aware but also give you a detailed understanding of cybersecurity and the elements included within it. `,
         imageSrc: '../../img/infrastructure.jpg',
         hasSubheading: true,
         subheading: [{

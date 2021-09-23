@@ -60,6 +60,7 @@ animation-fill-mode: backwards;
 }
 .headerTextClass1{
   border-right: 2px rgba(204, 204, 204, 0.603) solid;
+  /* margin-right: ; */
 }
 .Image1, .Image2,  .Image3, .Image4{
   background-repeat: no-repeat;
@@ -87,7 +88,7 @@ animation-fill-mode: backwards;
 
 .ProductItems{
   background-color: rgba(242,201,76,0.5);
-  color: #937304;
+  color: #262525;
   border-radius: 5px;
   font-size:30px;
   padding: 30px;
@@ -159,7 +160,10 @@ animation-fill-mode: backwards;
   }
 }
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width:1096px) {
+  .Services{
+    margin-top: 100px  !important;
+  }
   .headerTextClass1, .headerTextClass2{
     font-size: 40px;
   }
@@ -173,13 +177,18 @@ animation-fill-mode: backwards;
     }
 }
 @media screen and (max-width:768px) {
+  .Services{
+    margin-top: 30px  !important;
+  }
   .headerTextClass1, .headerTextClass2{
     font-size: 25px;
   }
   .Image1, .Image2,  .Image3, .Image4{
     width: 100%;
   }
-
+  .headerTextClass1{
+    border-right: 0px;
+  }
   .ProductItems{
     padding: 5px;
   }
@@ -189,13 +198,12 @@ margin: 2px 0;
 }
 
 }
-@media screen and (max-width:414px) {
+@media screen and (max-width:500px) {
+  
   .headerTextClass1, .headerTextClass2{
     font-size: 20px;
   }
-  .headerTextClass1{
-    border-right: 0px;
-  }
+ 
   .Image1, .Image2,  .Image3, .Image4{
     height: 200px;
   }
@@ -207,6 +215,20 @@ margin: 2px 0;
 font-size: 16px;  
 margin: 2px 0;
 }
+}
+@media screen and (max-width:414px) {
+ 
+  /* .Image1, .Image2,  .Image3, .Image4{
+    height: 200px;
+  }
+
+  .ProductItems{
+    padding: 5px;
+  }
+  .ProductItems > ul > li{
+font-size: 16px;  
+margin: 2px 0;
+} */
 }
 
 

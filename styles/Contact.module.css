@@ -114,12 +114,23 @@
    width: 400px;
    height: 150px;
  }}
+
+ 
+@media (max-width: 500px) {
+  .FormImg{
+    position: absolute;
+    top: 410%;
+     left: 65%;
+    width: 120px;
+    height: 40px;
+  }
+
+}
 @media (max-width: 414px) {
  .contact {
    background: linear-gradient(rgba(21, 31, 32, 1), rgba(21, 31, 32, .95));
  }
  .FormImg{
-   position: absolute;
    top: 328%;
     left: 65%;
    width: 120px;

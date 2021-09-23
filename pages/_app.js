@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }) {
     document.getElementsByTagName("head")[0].appendChild(threeScript);
 
     return () => {
-      if(threeScript){
+      if (threeScript) {
         threeScript.remove();
       }
     }
@@ -26,6 +26,9 @@ function MyApp({ Component, pageProps }) {
         <meta name="description" content="Citrine Technologies Ltd (Citrine) is an IT company that offers timely services as
     well as a vision for technology that will grow with your business.
     "/>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
         <meta name="keywords" content="IT Project Management and Consultancy,
         Telephony and Communication, Enterprise Automation, 
         Print Management Solutions,

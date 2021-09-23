@@ -9,16 +9,16 @@ import Link from "next/link";
 
 const Services = (props) => {
     return (
-        <section className="p-2 mt-3 bg-white">
+        <section className={"p-2 mt-4 bg-white "+ ServiceStyle.Services }>
             <div className="container" id="services">
                 <div className="row m-2  ">
-                    <div className="col-12 col-md-6 col-lg-4  p-2">
+                    <div className="col-12 col-md-6   p-2">
                         <small className="text-secondary">Our Services</small>
                         <h2 className={ServiceStyle.headerTextClass1}>
                             Best Services you can get!!
                         </h2>
                     </div>
-                    <div className="col-12 col-md-6 col-lg-8 pt-3 px-3">
+                    <div className="col-12 col-md-6  pt-3 px-3">
                         <p className="text-secondary p-2">We are one of the fastest growing solutions providers, a feat that has been fueled by the results we have achieved working with clients in a wide array of niches.</p>
                         <div className="d-flex justify-content-end ">
                             <Image src={ServiceImage} className="img-fluid rounded-circle h-100" alt="Sales rep statment" width="80" height="80" />

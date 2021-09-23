@@ -19,7 +19,7 @@ const Nav = () => {
         <a href="#" className="navbar-brand text-light text-uppercase">
             <Image src={"https://citrinetechltd.com/wp-content/uploads/2020/10/Citrine-logo-NEW.png"} className="img img-fluid" width="50" priority={true}  height="50" alt="citrinetech"/>
         </a>
-        <button className="navbar-toggler nav-button" type="button" data-toggle="collapse" data-target="#myNavbar">
+        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
             <div className={"bg-light " + NavStyles.line1}></div>
             <div className={"bg-light " + NavStyles.line2}></div>
             <div className={"bg-light " + NavStyles.line3}></div>
