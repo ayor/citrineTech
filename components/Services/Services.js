@@ -29,7 +29,7 @@ const Services = (props) => {
                     <div className="col">
                         <div className="row m-2 justify-content-center">
                             <div className={"col-md-6 col-lg-7 m-1 p-0 " + ServiceStyle.Image1}>
-                                <Link href="/services/1">
+                                <Link href="/services/1" passHref>
                                     <div className={"w-100 h-100 d-flex  align-items-center justify-content-center " + ServiceStyle.ServiceText1}>
                                         <p className="text-white ">Enterprise Automation <i className="fas fa-search text-white mt-2 "></i></p>
 
@@ -37,7 +37,7 @@ const Services = (props) => {
                                 </Link>
                             </div>
                             <div className={"col-md-6 col-lg-4 m-1 p-0 " + ServiceStyle.Image2}>
-                                <Link href="/services/2">
+                                <Link href="/services/2" passHref>
                                     <div className={"w-100 h-100 d-flex  align-items-center justify-content-center " + ServiceStyle.ServiceText1}>
                                         <p className="text-white ">Telephony and Communication <i className="fas fa-search text-white mt-2 "></i></p>
 
@@ -47,7 +47,7 @@ const Services = (props) => {
                         </div>
                         <div className="row  m-2 justify-content-center">
                             <div className={"col-md-6 col-lg-4 m-1 p-0 " + ServiceStyle.Image3}>
-                                <Link href="/services/3">
+                                <Link href="/services/3" passHref>
                                     <div className={"w-100 h-100 d-flex  align-items-center justify-content-center " + ServiceStyle.ServiceText1}>
                                         <p className="text-white ">Managed IT Services <i className="fas fa-search text-white mt-2 "></i></p>
 
@@ -55,7 +55,7 @@ const Services = (props) => {
                                 </Link>
                             </div>
                             <div className={"col-md-6 col-lg-7 m-1 p-0 " + ServiceStyle.Image4}>
-                                <Link href="/services/4">
+                                <Link href="/services/4" passHref>
 
                                     <div className={"w-100 h-100 d-flex  align-items-center justify-content-center " + ServiceStyle.ServiceText1}>
                                         <p className="text-white ">Infrastructure Security Service <i className="fas fa-search text-white mt-2 "></i></p>
