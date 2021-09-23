@@ -12,18 +12,18 @@ function MyApp({ Component, pageProps }) {
     // threeScript.setAttribute("src", "https://cdnjs.cloudflare.com/ajax/libs/three.js/r119/three.min.js");
     // document.getElementsByTagName("head")[0].appendChild(threeScript);
 
-    const poppins = document.createElement("link"); 
-    poppins.setAttribute("href", "https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
-    poppins.setAttribute("rel", "stylesheet");
+    // const poppins = document.createElement("link"); 
+    // poppins.setAttribute("href", );
+    // // poppins.setAttribute("rel", "stylesheet");
 
-    document.getElementsByTagName("head")[0].appendChild(poppins);
+    // document.getElementsByTagName("head")[0].appendChild(poppins);
 
 
-    return () => {
-      if (poppins) {
-        poppins.remove();
-      }
-    }
+    // return () => {
+    //   if (poppins) {
+    //     poppins.remove();
+    //   }
+    // }
   })
   return (
     <>
@@ -34,7 +34,8 @@ function MyApp({ Component, pageProps }) {
     well as a vision for technology that will grow with your business.
     "/>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"/>
         <link href="" rel="stylesheet"/>
         <meta name="keywords" content="IT Project Management and Consultancy,
         Telephony and Communication, Enterprise Automation, 
