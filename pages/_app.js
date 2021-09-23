@@ -47,7 +47,7 @@ function MyApp({ Component, pageProps }) {
         <title>CITRINE Technologies Limited</title>
       </Head>
       <Layout>
-        <Script src="https://kit.fontawesome.com/2b33a4ca20.js" crossorigin="anonymous" />
+        <Script src="https://kit.fontawesome.com/2b33a4ca20.js" crossOrigin="anonymous" />
         <Script id="hs-script-loader" async defer src="//js.hs-scripts.com/2761242.js" />
         <Script src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_SITE_KEY}`}></Script>
         {/* <Script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.waves.min.js"></Script> */}
