@@ -5,17 +5,13 @@ import NavStyles from '../../styles/Nav.module.css';
 
 const Nav = () => {
     const [activeState, setActiveState] = useState("Home")
-    useEffect(()=>{
-
-    })
 
     const handleClick = (navType)=>{
-
         setActiveState(navType); 
     }
 
     return(
-    <nav className={"navbar navbar-expand-md fixed-top container " + NavStyles.navMenu}>
+    <nav className={"navbar navbar-expand-md container  " + NavStyles.navMenu}>
         <a href="#" className="navbar-brand text-light text-uppercase">
             <Image src={"https://citrinetechltd.com/wp-content/uploads/2020/10/Citrine-logo-NEW.png"} className="img img-fluid" width="50" priority={true}  height="50" alt="citrinetech"/>
         </a>

@@ -88,6 +88,10 @@ const Contact = () => {
                 })
         })
     }
+    const validateEmail = (email) => {
+        const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+    }
 
     const submitHandler = (event) => {
         event.preventDefault();
@@ -97,6 +101,16 @@ const Contact = () => {
             setLoadingState(false);
             setErrorMessage("kindly complete all fields, then try again");
 
+            setTimeout(() => {
+                setErrorMessage("");
+
+            }, 3000)
+            return;
+        }
+
+        if(!validateEmail(email)){
+            setLoadingState(false);
+            setErrorMessage("kindly enter a valid email");
             setTimeout(() => {
                 setErrorMessage("");
 

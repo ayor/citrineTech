@@ -40,30 +40,10 @@ const Footer = () => (
                     <div className="embed-responsive embed-responsive-16by9">
                         <iframe className="embed-responsive-item mr-2"  src="https://www.youtube.com/embed/PLIfFgq1994" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                     </div>
-                    <ul className="list-inline">
-                        <li className="list-inline-item"><a href="https://www.facebook.com/citrinetech" target="_blank" rel="noreferrer"></a><i className="fa fa-facebook-square text-primary"></i></li>
-                        <li className="list-inline-item"><a href="https://twitter.com/citrinetech" target="_blank" rel="noreferrer"><i className="fa fa-twitter  text-info"></i></a></li>
-                        <li className="list-inline-item"><a href="https://www.linkedin.com/company/citrineltd" target="_blank" rel="noreferrer"><i className="fa fa-linkedin-square  text-primary"></i></a></li>
-                        <li className="list-inline-item"><a href="https://www.instagram.com/citrinetech/?hl=en" target="_blank" rel="noreferrer"><i className="fa fa-instagram  text-warning"></i></a></li>
-                        <li className="list-inline-item"><a href="https://www.youtube.com/channel/UCSws4FRBtxqn-tcmAYAIHgA" target="_blank" rel="noreferrer"><i className="fa fa-youtube text-danger"></i></a></li>
-                    </ul>
+                   
                 </div>
             </div>
-            <div className="row">
-                <div className="col text-center text-light border-top pt-3">
-                    <p>&copy; 2021 Copyright, All Rights Reserved</p>
-                    <small > <Link href='https://www.freepik.com/vectors/technology'>
-                        <a className=" my-2 text-dark">Technology
-                        vector created by upklyak - www.freepik.com
-                        - Photo by Alex Andrews from Pexels
-                           </a>
-                    </Link>
-                    </small>
-                    <br />
-                    <small className=" my-2 text-dark">Video by Pressmaster from Pexels</small>
-                </div>
 
-            </div>
         </div>
     </footer>
 );

@@ -59,7 +59,7 @@ animation-fill-mode: backwards;
 /* animation: slide-in-left 2s ease ; */
 }
 .headerTextClass1{
-  border-right: 2px rgba(204, 204, 204, 0.603) solid;
+  /* border-right: 2px rgba(204, 204, 204, 0.603) solid; */
   /* margin-right: ; */
 }
 .Image1, .Image2,  .Image3, .Image4{

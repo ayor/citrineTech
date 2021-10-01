@@ -3,12 +3,6 @@ import Btn from '../Button/Button';;
 import HeaderStyles from '../../styles/Header.module.css';
 import UnderLine from './Underline';
 import HeaderImg from './HeaderImage';
-import Image from 'next/image';
-import maleImg from '../../public/img/headerImg.jpg'
-import NET from "vanta/dist/vanta.net.min";
-// import RING from "vanta/dist/vanta.rings.min";
-import * as THREE from 'three';
-
 const Header = ({ title, bannerMessage, showbtn }) => {
     // const [vantaEffect, setVantaEffect] = useState(0)
     const myRef = useRef(null)
@@ -66,9 +60,7 @@ const Header = ({ title, bannerMessage, showbtn }) => {
                     <div className="row">
                         <div className={"card col-md-4 offset-md-7 pt-4 px-4  " + HeaderStyles.WelcomeMessage}>
                             <p className="text-secondary card-title">Welcome to Citrine Technologies Ltd (Citrine), we are a one stop IT Shop and a managed IT service provider with a track record of providing hybrid solutions tailored for mid-market and enterprise companies.</p>
-                            <div className="d-flex justify-content-end ">
-                                <Image src={maleImg} className="img-fluid rounded-circle " alt="CEO's welcome message" width="80" height="80" />
-                            </div>
+                           
                         </div>
                     </div>
                 </div>

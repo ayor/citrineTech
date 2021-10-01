@@ -3,7 +3,6 @@ const nodemailer = require("nodemailer");
 const fetch = require("node-fetch");
 
 const _usermail = "citrinetechltd@gmail.com"
-const _hashedpass = "$2a$12$3Js.5o2PCEDVd.cHxPQOZOZEZADLzpo/8lq4XLrz7.kG7AW5c586e";
 
 const _userpass = process.env.PASS;
 
@@ -19,7 +18,10 @@ let transporter = nodemailer.createTransport({
     pass: _userpass
   }
 });
-
+const validateEmail = (email) => {
+  const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
+}
 
 const messageHandler = async (req, res) => {
   try {
@@ -36,6 +38,14 @@ const messageHandler = async (req, res) => {
       });
       return;
     }
+
+    if(!validateEmail(email)){
+      const err =  new Error(); 
+        err.status = 500; 
+        err.message = "Suspicious Entry, please try again later"; 
+        throw err; 
+    }
+    
 
     const response = await fetch(
       `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.NEXT_PUBLIC_SECRET_KEY}&response=${captchaCode}
