@@ -2,7 +2,9 @@ import React, { useEffect, useState, useRef } from 'react'
 import Btn from '../Button/Button';;
 import HeaderStyles from '../../styles/Header.module.css';
 import UnderLine from './Underline';
-import HeaderImg from './HeaderImage';
+import Image from 'next/image';
+import citrineSrc from '../../public/img/CITRINEFRONTPAGE.png'; 
+
 const Header = ({ title, bannerMessage, showbtn }) => {
     // const [vantaEffect, setVantaEffect] = useState(0)
     const myRef = useRef(null)
@@ -48,12 +50,12 @@ const Header = ({ title, bannerMessage, showbtn }) => {
                         <div className="col ">
                             <div className={"text-dark p-2 " + HeaderStyles.banner}>
                                 <small className="text-secondary mt-2"> {headerMessage}</small>
-                                <h1 className={"font-weight-bold text-dark pl-4 mb-4 " + HeaderStyles.bannerHeading}>{headerTitle}</h1>
+                                <h1 className={"font-weight-bold text-dark pl-4 mb-4 " + HeaderStyles.bannerHeading}>Your technology partner with a focus on providing proactive solutions</h1>
                                 <UnderLine />
                                 {showbtn ? <Btn btnHref={"#contact"} title={"Contact Us"} /> : null}
                             </div>
                             <div className={HeaderStyles.HeaderImg}>
-                                <HeaderImg />
+                               {/* <Image src={citrineSrc}  layout="fill"/> */}
                             </div>
                         </div>
                     </div>

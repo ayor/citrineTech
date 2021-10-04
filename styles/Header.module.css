@@ -41,14 +41,20 @@
     animation-fill-mode: backwards;
   }
   .HeaderImg{
-    width: 50%;
+    width: 40%;
     position: absolute;
     top: 10%;
-    left: 25%;
+    left: 55%;
+    background-image: url('/img/CITRINEFRONTPAGE.png');
+    height: 400px;
+    /* width: 400px; */
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
   .Line{
     position: absolute;
-    top: 70%;
+    top: 74%;
     left: 14%; 
     width: 154px;
     height: 39px;

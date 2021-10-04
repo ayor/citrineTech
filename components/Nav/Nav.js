@@ -12,10 +12,12 @@ const Nav = () => {
 
     return(
     <nav className={"navbar navbar-expand-md container  " + NavStyles.navMenu}>
-        <a href="#" className="navbar-brand text-light text-uppercase">
+        <Link href="/" passHref>
+        <a  className="navbar-brand text-light text-uppercase">
             <Image src={"https://citrinetechltd.com/wp-content/uploads/2020/10/Citrine-logo-NEW.png"} className="img img-fluid" width="50" priority={true}  height="50" alt="citrinetech"/>
         </a>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+        </Link>
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar">
             <div className={"bg-light " + NavStyles.line1}></div>
             <div className={"bg-light " + NavStyles.line2}></div>
             <div className={"bg-light " + NavStyles.line3}></div>
