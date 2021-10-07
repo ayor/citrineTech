@@ -14,7 +14,7 @@ const SocialMediaLinks = props => (
                 padding: "5px",
             }}>
                 <Link href="https://www.facebook.com/citrinetech" passHref>
-                    <a>
+                    <a target="_blank">
                         <Facebook color="primary" />
                     </a>
                 </Link>
@@ -23,7 +23,7 @@ const SocialMediaLinks = props => (
                 padding: "5px",
             }}>
                 <Link href="https://twitter.com/citrinetech" passHref>
-                    <a>
+                <a target="_blank">
                         <Twitter style={{ color: "#00b0ff" }} />
                     </a>
                 </Link>
@@ -32,7 +32,7 @@ const SocialMediaLinks = props => (
                 padding: "5px",
             }}>
                 <Link href="https://www.instagram.com/citrinetech/?hl=en" passHref>
-                    <a>
+                <a target="_blank">
                         <Instagram color="secondary" />
                     </a>
                 </Link>
@@ -41,7 +41,7 @@ const SocialMediaLinks = props => (
                 padding: "5px",
             }}>
                 <Link href="https://www.linkedin.com/company/citrineltd">
-                    <a>
+                <a target="_blank">
                         <LinkedIn color="primary" />
                     </a>
                 </Link>
