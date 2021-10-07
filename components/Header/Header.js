@@ -44,6 +44,7 @@ const Header = ({ title, bannerMessage, showbtn }) => {
 
     return (
         <section className={"container px-3 " + HeaderStyles.header}>
+           
             <header ref={myRef} className={`row`}>
                 <div className="col">
                     <div className="row ">
@@ -66,7 +67,7 @@ const Header = ({ title, bannerMessage, showbtn }) => {
                         </div>
                     </div>
                 </div>
-
+            
             </header>
         </section >
     )

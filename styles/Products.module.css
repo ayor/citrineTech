@@ -53,7 +53,7 @@ animation-fill-mode: backwards;
 }
 .headerTextClass1, .headerTextClass2{
   font-family: 'Poppins' sans-serif;
-  font-size: 45px;
+  font-size: 30px;
   font-weight: bold;
   /* text-decoration: underline; */
 /* animation: slide-in-left 2s ease ; */

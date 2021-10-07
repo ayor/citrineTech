@@ -11,7 +11,7 @@ const Services = (props) => {
     return (
         <section className={"p-2  bg-white "+ ServiceStyle.Services }>
             <div className="container" id="services">
-                <div className="row m-2  ">
+                <div className="row mb-2  ">
                     <div className="col p-2">
                         <small className="text-secondary">Our Services</small>
                         <h3 className={"text-center m-3 "+ServiceStyle.headerTextClass1}>

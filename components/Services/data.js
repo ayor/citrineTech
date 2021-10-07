@@ -5,41 +5,30 @@ export const data = [
         hasSubheading: true,
         subheading: [
             {
-                header: "Why Managed Services",
+                header: "Features ",
                 detail: {
                     hasText: false,
+                    // text: "With all of the cloud-based applications and big data stressing your network, how proactive are you today in ensuring maximum network performance and uptime?",
                     list: [
-                        "Ability to deliver on projects outside of in-house expertise",
-                        "IT staff augmentation (7×24) and rapid scalability",
-                        "Access to industry-specific expertise",
-                        "Cost savings (network monitoring, management, and maintenance)",
-                        "Better alignment between IT staffing, budget, and business needs",
-                        "Move IT spending from a capital expense to an operating expense"
-                    ]
-                }
-            },
-            {
-                header: "Features of Our Managed Services",
-                detail: {
-                    hasText: true,
-                    text: "With all of the cloud-based applications and big data stressing your network, how proactive are you today in ensuring maximum network performance and uptime?",
-                    list: [
-                        "Proactive problem notification regarding network performance and health",
-                        "A scalable, flexible staffing solution to your network monitoring needs",
-                        "7x24x365 network monitoring expertise",
-                        "Customer access to network reporting",
-                        "Extensive dashboard that provides instant visibility to network status",
-                        "Comprehensive support offerings",
-                        "Accelerated problem detection and resolution of supported devices, including updating configurations and software or making hardware changes",
-                        "A designated Service Manager to manage problem resolution support",
-                        "Quarterly service reviews to discuss the status of network performance and health vulnerabilities and suggested improvements"
+                        "Access to a large team of highly trained and experienced Engineers (NOC)",
+                        "Improved service with a guaranteed service level agreement",
+                        "Allow you to properly budget for your IT services",
+                        "Access to highly resilience and highly secured IT infrastructure",
+                        "Proactive Support",
+                        "Improved IT security",
+                        "Management and Status Reporting",
+                        "Best Practice Driven",
+                        "Automated and Reliable",
+                        "Better focus on business goals and projects"
                     ]
                 }
             }
         ],
-        mainText: `The Citrine Technologies Managed IT Services program provides affordable proactive IT management, monitoring and support to growing businesses at a fixed monthly fee. Utilizing our unique framework for providing managed IT services, Citrine Technologies provides a range of proactive services to keep your computer systems, IT infrastructure up and running and your people and business productive.
-        Our goal is to serve as your technology partner with a focus on providing proactive solutions at a predictable monthly fee. We use a consultative approach to evaluate your business and technology needs and then advise on the best solutions for your current and future needs. Citrine Technologies can save your organization time and money through better use of appropriate technologies.
-        `,
+        hasSecondParagraph: true,
+        mainText: `The Citrine Technologies Managed IT Services program provides affordable proactive IT management, monitoring, and support to growing businesses at a fixed monthly fee. Utilizing our unique framework for providing managed IT services, Citrine Technologies provides a range of proactive services to keep your computer systems, IT infrastructure up and running and your people and business productive.`,
+        secondParagraph: `Our goal is to serve as your technology partner with a focus on providing proactive solutions at a predictable monthly fee. We use a consultative approach to evaluate your business and technology needs and then advise on the best solutions for your current and future needs. Citrine Technologies can save your organization time
+        and money through better use of appropriate technologies.`, 
+       
         imageSrc: '../../img/support.jpg',
     },
     {
@@ -47,24 +36,25 @@ export const data = [
         header: "Enterprise Automation",
         hasSubheading: true,
         subheading: [{
-            header: "Our solutions include:",
+            header: "BENEFITS OF PROCESS AUTOMATION",
             detail: {
                 hasText: false,
                 list: [
-                    "Document Management Solution",
-                    "Print Management Solution",
-                    "Corporate Gifting Solution",
-                    "ERP Solution",
-                    "Hospital Management System"
+                    "Increase focus on more strategic initiatives",
+                    "Grow your organization",
+                    "Boost productivity",
+                    "Improve transparency",
+                    "Reduce costs",
+                    "Spark innovation",
+                    "Identify bottlenecks early",
+                    "Make audits a breeze",
                 ]
             }
         }],
-        mainText: `Forward-thinking business leaders are challenging their organisations to achieve transformation by harnessing digital technologies with organisational, operational, and business innovation to create new ways of operating and growing businesses. Optimizing IT infrastructure and operational processes through automation is key to successfully achieving digital transformation.
-
-        At Citrine, we can help achieve this transformation with enterprise solution that deliver automation. We have developed, and partnered with the best tools in the market to deliver this automation.
-        
-        Our team of software developers will undoubtedly help you achieve the automation that will grow your business
-        `,
+        hasSecondParagraph: true,
+        mainText: `Business leaders are challenging their organizations’ to achieve transformation by harnessing digital technologies with organizational, operational, and business innovation to create new ways of operating and growing businesses. Optimizing IT infrastructure and operational processes through automation is key to successfully achieving digital transformation.`,
+        secondParagraph: `At Citrine, we use technology to automate routine tasks, such as data entry, routing information between parties,
+        Organizing documents and more, aimed at making human lives easier by transforming time-consuming busywork into seamless processes that accelerate how work gets done whilst improving productivity and efficiency.`, 
         imageSrc: '../../img/automation.jpg',
     },
     {

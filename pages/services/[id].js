@@ -20,6 +20,10 @@ const Index = props => {
         <div className="row">
             <div className="col-md-6 p-5">
                 <p className="p-3 text-secondary"> {serviceInfo.mainText}</p>
+
+                <p className="p-3 text-secondary"> {serviceInfo.hasSecondParagraph ? serviceInfo.secondParagraph : null }</p>
+
+                
             </div>
             {serviceInfo.hasSubheading ? (<div className="col-md-6 p-5 my-3 text-secondary">
                 {serviceInfo.subheading.map((heading, ind) => {
@@ -45,7 +49,6 @@ const Index = props => {
                     {detail}
                 </div>
             </div>
-
         </section>
     )
 };
