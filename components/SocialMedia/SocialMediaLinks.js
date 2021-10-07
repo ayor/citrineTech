@@ -5,13 +5,14 @@ import { Facebook, Twitter, Instagram, LinkedIn } from '@mui/icons-material';
 
 const SocialMediaLinks = props => (
     <div style={{
-        position: 'sticky',
+        position: 'fixed',
         top: '45%',
         left: "0"
     }}>
-        <ul className="list list-unstyled">
+        <ul className="list list-unstyled bg-white">
             <li className="list-item" style={{
                 padding: "5px",
+               
             }}>
                 <Link href="https://www.facebook.com/citrinetech" passHref>
                     <a target="_blank">
