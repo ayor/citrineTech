@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import NavStyles from '../../styles/Nav.module.css';
+import Logo from '../../public/img/logo.png'; 
 
 const Nav = () => {
     const [activeState, setActiveState] = useState("Home")
@@ -14,7 +15,7 @@ const Nav = () => {
     <nav className={"navbar navbar-expand-md container  " + NavStyles.navMenu}>
         <Link href="/" passHref>
         <a  className="navbar-brand text-light text-uppercase">
-            <Image src={"https://citrinetechltd.com/wp-content/uploads/2020/10/Citrine-logo-NEW.png"} className="img img-fluid" width="50" priority={true}  height="50" alt="citrinetech"/>
+            <Image src={Logo} className="img img-fluid" width="80" priority={true}  height="80" alt="citrinetech"/>
         </a>
         </Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar">
