@@ -27,8 +27,8 @@ export const data = [
         hasSecondParagraph: true,
         mainText: `The Citrine Technologies Managed IT Services program provides affordable proactive IT management, monitoring, and support to growing businesses at a fixed monthly fee. Utilizing our unique framework for providing managed IT services, Citrine Technologies provides a range of proactive services to keep your computer systems, IT infrastructure up and running and your people and business productive.`,
         secondParagraph: `Our goal is to serve as your technology partner with a focus on providing proactive solutions at a predictable monthly fee. We use a consultative approach to evaluate your business and technology needs and then advise on the best solutions for your current and future needs. Citrine Technologies can save your organization time
-        and money through better use of appropriate technologies.`, 
-       
+        and money through better use of appropriate technologies.`,
+
         imageSrc: '../../img/support.jpg',
     },
     {
@@ -54,7 +54,7 @@ export const data = [
         hasSecondParagraph: true,
         mainText: `Business leaders are challenging their organizations’ to achieve transformation by harnessing digital technologies with organizational, operational, and business innovation to create new ways of operating and growing businesses. Optimizing IT infrastructure and operational processes through automation is key to successfully achieving digital transformation.`,
         secondParagraph: `At Citrine, we use technology to automate routine tasks, such as data entry, routing information between parties,
-        Organizing documents and more, aimed at making human lives easier by transforming time-consuming busywork into seamless processes that accelerate how work gets done whilst improving productivity and efficiency.`, 
+        Organizing documents and more, aimed at making human lives easier by transforming time-consuming busywork into seamless processes that accelerate how work gets done whilst improving productivity and efficiency.`,
         imageSrc: '../../img/automation.jpg',
     },
     {
@@ -78,16 +78,19 @@ export const data = [
                 ]
             }
         }],
-        imageSrc: '../../img/services.jpg',
+        imageSrc: '../../img/services.png',
     },
     {
         id: 4,
         header: "Infrastructure Security Services",
         mainText: ` New threats are emerging daily and it can sometimes be difficult to know if you are at risk, from and how severe the impact of these threats could be. To manage and control your security risks, it is important to identify system and network vulnerabilities that may be exploited by intruders, and to take countermeasure to prevent any possible attack.
 
+         `,
+        hasSecondParagraph: true,
+        secondParagraph: `
         Citrine Technologies Ltd shall develop a methodology of helping you to understand your specific cyber domain, and how you can reduce the threats you face and become both cyber aware and cyber secure. Our Infrastructure Security service will provide your organization with a detailed report on your vulnerabilities and a range of recommendations to help you overcome these issues. 
-        
-        This service will not only enable you to become cyber aware but also give you a detailed understanding of cybersecurity and the elements included within it. `,
+                
+                This service will not only enable you to become cyber aware but also give you a detailed understanding of cybersecurity and the elements included within it.`,
         imageSrc: '../../img/infrastructure.jpg',
         hasSubheading: true,
         subheading: [{
@@ -104,3 +107,4 @@ export const data = [
         }],
     },
 ]
+

@@ -58,6 +58,13 @@ animation-fill-mode: backwards;
   /* text-decoration: underline; */
 /* animation: slide-in-left 2s ease ; */
 }
+.headerTextClass3{
+  font-family: 'Poppins' sans-serif;
+  font-size: 48px;
+  font-weight: bold;
+  /* text-decoration: underline; */
+/* animation: slide-in-left 2s ease ; */
+}
 .headerTextClass1{
   /* border-right: 2px rgba(204, 204, 204, 0.603) solid; */
   /* margin-right: ; */

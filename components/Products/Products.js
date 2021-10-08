@@ -27,8 +27,8 @@ const Products = (props) => {
                 {/* <!-- title --> */}
                 <div className="row text-dark p-3">
                     <div className=" col-md-5 mb-3">
-                        <small className="text-secondary">Our products</small>
-                        <h2 className={ProductStyle.headerTextClass2}>We create smart solutions that solve present-day problems whilst keeping an eye on future challenges.</h2>
+                        <p className="text-secondary lead">Our Products</p>
+                        <h2 className={ProductStyle.headerTextClass3}>We create smart solutions that solve present-day problems whilst keeping an eye on future challenges.</h2>
                     </div>
                     <div className=" col-md-7  ">
                         <div className={"w-100 h-100 " + ProductStyle.ProductItems}>
@@ -44,17 +44,6 @@ const Products = (props) => {
                 </div>
 
             </section>
-             <section className="container-fluid ">
-                <div className="row">
-                    <div className="col col-md-6 col-g-3 ">
-                        <div className={"w-100 h-100  align-items-center p-3   "+ ProductStyle.ProductsMessage}>
-                            <p className=" px-4 mb-1 pt-4 m-0"> We have successful implementations; our IT solutions and services are aimed to deliver business value and reduce cost.</p>
-                        </div>
-                    </div>
-
-                </div>
-
-            </section> 
         </>
     )
 };

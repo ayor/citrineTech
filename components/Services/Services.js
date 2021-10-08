@@ -9,11 +9,11 @@ import Link from "next/link";
 
 const Services = (props) => {
     return (
-        <section className={"p-2  bg-white "+ ServiceStyle.Services }>
+        <section className={"p-2 mt-2 bg-white "+ ServiceStyle.Services }>
             <div className="container" id="services">
                 <div className="row mb-2  ">
                     <div className="col p-2">
-                        <small className="text-secondary">Our Services</small>
+                        <p className="text-secondary lead" >Our Services</p>
                         <h3 className={"text-center m-3 "+ServiceStyle.headerTextClass1}>
                         We deliver on every aspect of a complete Hybrid IT solution.
                         </h3>

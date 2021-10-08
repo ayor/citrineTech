@@ -31,13 +31,13 @@ const Nav = () => {
                     </Link>
                 </li>
                 <li className="nav-item" onClick={handleClick.bind(this, "Services")}>
-                <Link href="#services">
+                <Link href="/#services">
                         <a className={activeState === "Services" ? `nav-link m-2 ${NavStyles.navItem}` : `nav-link m-2 ${NavStyles.menuItem}` }>Our Services</a>
 
                     </Link>
                 </li>
                 <li className="nav-item" onClick={handleClick.bind(this, "Products")}>
-                <Link href="#products" >
+                <Link href="/#products" >
                         <a className={activeState === "Products" ? `nav-link m-2 ${NavStyles.navItem}` : `nav-link m-2 ${NavStyles.menuItem}` }>Products</a>
 
                     </Link>

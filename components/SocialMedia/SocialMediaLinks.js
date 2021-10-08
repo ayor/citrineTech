@@ -6,7 +6,7 @@ import { Facebook, Twitter, Instagram, LinkedIn } from '@mui/icons-material';
 const SocialMediaLinks = props => (
     <div style={{
         position: 'fixed',
-        top: '45%',
+        top: '25%',
         left: "0"
     }}>
         <ul className="list list-unstyled bg-white">

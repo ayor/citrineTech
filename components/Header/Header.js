@@ -60,14 +60,12 @@ const Header = ({ title, bannerMessage, showbtn }) => {
                             </div>
                         </div>
                     </div>
-                    <div className="row">
+                    <div className="row mt-3">
                         <div className={"card col-md-4 offset-md-7 pt-4 px-4  " + HeaderStyles.WelcomeMessage}>
-                            <p className="text-secondary card-title">Welcome to Citrine Technologies Ltd (Citrine), we are a one stop IT Shop and a managed IT service provider with a track record of providing hybrid solutions tailored for mid-market and enterprise companies.</p>
-                           
+                            <p className="text-secondary card-title">Citrine is an IT company that offers timely services as well as a vision for technology that will grow with your business. We provide businesses with affordable and reliable IT services aimed at addressing Protection, Preparedness, and Productivity.</p>
                         </div>
                     </div>
                 </div>
-            
             </header>
         </section >
     )
