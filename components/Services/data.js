@@ -104,7 +104,7 @@ export const data = [
         detail: {
           hasText: false,
           list: [
-            'Manged IT Services',
+            'Manged Security Services',
             'Vulnerability Assessment',
             'Information Process Audit',
             'Penetration Test',

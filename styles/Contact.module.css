@@ -1,59 +1,60 @@
 /* contact */
-.contact { 
-  background: linear-gradient(105deg,
-  rgba(21, 31, 32, 1) 0%,
-  rgba(21, 31, 32, .95) 50%,
-  transparent 50%),
-  url(/img/contact.jpg) center center /cover;
+.contact {
+  background: linear-gradient(
+      105deg,
+      rgba(21, 31, 32, 1) 0%,
+      rgba(21, 31, 32, 0.95) 50%,
+      transparent 50%
+    ),
+    url(/img/contact.jpg) center center / cover;
   background-attachment: fixed;
 }
 
-.contactCard{
+.contactCard {
   min-height: 360px !important;
 }
 
-.contactCard:hover{
-   transform: translateY(-8px);
-   border-color: #f5593d;
-   transition: all .8s;
+.contactCard:hover {
+  transform: translateY(-8px);
+  border-color: #f5593d;
+  transition: all 0.8s;
 }
 
 .input {
- background: #c9c9c952;
- border-radius: 5px;
- transition: all .8s;
+  background: #c9c9c952;
+  border-radius: 5px;
+  transition: all 0.8s;
 }
-.Fade{
+.Fade {
   animation: fadein 1s ease;
   transition: all;
 }
 .input:focus {
- box-shadow: none;
- border-color: #937304;
+  box-shadow: none;
+  border-color: #937304;
 }
 
 .submitButton {
-
- color: #F2C94C;
- background: #262525;
- width: 100%;
- transition: all .3s;
+  color: #f2c94c;
+  background: #262525;
+  width: 100%;
+  transition: all 0.3s;
 }
 
 .submitButton:hover {
-  background: #F2C94C;
+  background: #f2c94c;
   color: #262525;
-  transition: all .3s;
- transform: translateY(-3px);
+  transition: all 0.3s;
+  transform: translateY(-3px);
 }
 
 .label {
- color: rgb(170, 169, 169);
- display: block;
- margin-top: -70px;
- margin-left: 4px;
- font-size: 13px;
- transition: all .3s;
+  color: rgb(170, 169, 169);
+  display: block;
+  margin-top: -70px;
+  margin-left: 4px;
+  font-size: 13px;
+  transition: all 0.3s;
 }
 
 /* .input:placeholder-shown + .label {
@@ -62,106 +63,100 @@
  color: #f5593d;
  visibility: hidden;
 } */
-.textarea{
+.textarea {
   background: #c9c9c952;
- border-radius: 5px;
+  border-radius: 5px;
 }
 
-.textarea:focus{
- box-shadow: none;
- transition: all .3s;
- border-color: #937304;
+.textarea:focus {
+  box-shadow: none;
+  transition: all 0.3s;
+  border-color: #937304;
 }
 
-.contactForm{
-   max-width: 70%;
-   margin-left: auto;
+.contactForm {
+  max-width: 70%;
+  margin-left: auto;
 }
 
-.FormImg{
-  width:541px;
-  height:261px;
+.FormImg {
+  width: 541px;
+  height: 261px;
 }
 
-.headerTextClass{
+.headerTextClass {
   font-family: 'Poppins' sans-serif;
   font-size: 65px;
   font-weight: bold;
-
 }
 
-
-
 @keyframes fadein {
-  0%{
+  0% {
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 1;
   }
 }
 /* end of contact */
 
-
-
-
 @media (max-width: 768px) {
   .contactForm {
     max-width: 95%;
-   }
- .FormImg{
-  margin-top: 5%;
-   width: 400px;
-   height: 150px;
- }}
+  }
+  .FormImg {
+    display: none;
+    margin-top: 5%;
+    width: 400px;
+    height: 150px;
+  }
+}
 
- 
 @media (max-width: 500px) {
-  .FormImg{
+  .FormImg {
     position: absolute;
     top: 410%;
-     left: 65%;
+    left: 65%;
+    width: 120px;
+    height: 40px;
+  }
+}
+@media (max-width: 414px) {
+  .contact {
+    background: linear-gradient(rgba(21, 31, 32, 1), rgba(21, 31, 32, 0.95));
+  }
+  .FormImg {
+    top: 328%;
+    left: 65%;
     width: 120px;
     height: 40px;
   }
 
-}
-@media (max-width: 414px) {
- .contact {
-   background: linear-gradient(rgba(21, 31, 32, 1), rgba(21, 31, 32, .95));
- }
- .FormImg{
-   top: 328%;
-    left: 65%;
-   width: 120px;
-   height: 40px;
- }
-
- .contactForm {
-  max-width: 95%;
-margin: auto;
- }
+  .contactForm {
+    max-width: 95%;
+    margin: auto;
+  }
 }
 @media (max-width: 411px) {
-  .FormImg{
+  .FormImg {
     top: 302%;
     left: 63%;
   }
 }
 @media (max-width: 375px) {
-  .FormImg{
+  .FormImg {
     top: 311%;
     left: 65%;
   }
 }
-@media (max-width: 375px) and (max-height:667px) {
-  .FormImg{
+@media (max-width: 375px) and (max-height: 667px) {
+  .FormImg {
     top: 357%;
     left: 65%;
   }
 }
 @media (max-width: 360px) {
-  .FormImg{
+  .FormImg {
     position: absolute;
     top: 365%;
     left: 65%;
@@ -169,8 +164,3 @@ margin: auto;
     height: 38px;
   }
 }
-
-
-
-
-

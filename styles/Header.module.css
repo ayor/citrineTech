@@ -1,5 +1,10 @@
 .header {
-  height: 75vh;
+  height: 100vh;
+  background-image: url('/img/CITRINEFRONTPAGE.png');
+
+  background-position: right;
+  background-size: 60%;
+  background-repeat: no-repeat;
 }
 
 .btn {
@@ -29,6 +34,7 @@
   font-family: 'Poppins' sans-serif;
   font-weight: bold;
   font-size: 45px;
+  width: 50%;
   animation-name: anim;
   animation-duration: 2s;
 }
@@ -41,12 +47,6 @@
   animation-fill-mode: backwards;
 }
 .HeaderImg {
-  background-image: url('/img/CITRINEFRONTPAGE.png');
-  height: 400px;
-  width: 100%;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 .Line {
   position: absolute;
@@ -57,9 +57,7 @@
 }
 
 .WelcomeMessage {
-  position: absolute;
   background-color: #f2c94c;
-  top: 70%;
   font-family: 'Poppins' sans-serif;
   /* right: 5%; */
 }
@@ -100,19 +98,36 @@
     margin-top: 5%;
     margin-left: 1%;
   }
+
   .Line {
     top: 73%;
     left: 5%;
     width: 120px;
     height: 40px;
   }
+  .bannerHeading {
+    width: 55%;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  .header {
+    background-size: contain;
+    background-position: bottom;
+  }
   .headerImageClass {
     width: 140%;
     margin-top: 5%;
     margin-left: 1%;
+  }
+  .HeaderImg {
+    background-position: bottom;
+  }
+  .header {
+    background-position: bottom;
+  }
+  .bannerHeading {
+    margin-bottom: 5px !important;
   }
   .banner {
     top: 40%;
@@ -121,7 +136,8 @@
     width: 60%;
   }
   .bannerHeading {
-    font-size: 30px;
+    font-size: 43px;
+    width: 100%;
   }
   .Line {
     top: 50%;
@@ -139,6 +155,9 @@
     transform: translate(-60%, -50%);
     width: 80%;
   }
+  .HeaderImg {
+    margin-top: 25px;
+  }
   .Line {
     top: 55%;
     left: 38%;
@@ -146,15 +165,12 @@
     height: 12px;
   }
   .bannerHeading {
-    font-size: 20px;
+    font-size: 30px;
   }
-  .headerImageClass {
-    position: absolute;
-    width: 170%;
-    margin-top: -90%;
-    margin-left: -15%;
-    z-index: -1;
+  .header {
+    background-size: 90% 40%;
   }
+
   .btn {
     width: 100px;
     margin-top: 5px;
@@ -175,13 +191,6 @@
     left: 51%;
     width: 60px;
     height: 12px;
-  }
-
-  .headerImageClass {
-    position: absolute;
-    width: 170%;
-    margin-top: -40%;
-    margin-left: -15%;
   }
 }
 

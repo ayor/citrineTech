@@ -45,64 +45,43 @@ const Header = ({ title, bannerMessage, showbtn }) => {
     showbtn = true;
   }
 
-  return (
+  return [
     <section className={'container px-3 ' + HeaderStyles.header}>
       <header ref={myRef} className={`row`}>
         <div className="col">
-          <div className="row ">
-            <div className="col ">
-              <div className="row">
-                <div className="col">
-                  <div
-                    className={'text-dark p-2 ' + HeaderStyles.banner}
-                    style={{ zIndex: 999 }}
-                  >
-                    <small className="text-secondary mt-2">
-                      {' '}
-                      {headerMessage}
-                    </small>
-                    <h1
-                      className={
-                        'font-weight-bold text-dark pl-4 mb-4 ' +
-                        HeaderStyles.bannerHeading
-                      }
-                    >
-                      Your technology partner with a focus on providing
-                      proactive solutions
-                    </h1>
-                    {/* <UnderLine /> */}
-                    {showbtn ? (
-                      <Btn btnHref={'#contact'} title={'Contact Us'} />
-                    ) : null}
-                  </div>
-                </div>
-                <div className="col">
-                  <div className={HeaderStyles.HeaderImg}>
-                    {/* <Image src={citrineSrc}  layout="fill"/> */}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="row mt-3">
-            <div
+          <div
+            // + HeaderStyles.banner
+            className={'text-dark p-2 ' + HeaderStyles.HeaderImg}
+          >
+            <small className="text-secondary mt-2"> {headerMessage}</small>
+            <h1
               className={
-                'card col-md-4 offset-md-7 pt-4 px-4  ' +
-                HeaderStyles.WelcomeMessage
+                'font-weight-bold text-dark pl-4 mb-4 ' +
+                HeaderStyles.bannerHeading
               }
             >
-              <p className="text-secondary card-title">
-                Citrine is an IT company that offers timely services as well as
-                a vision for technology that will grow with your business. We
-                provide businesses with affordable and reliable IT services
-                aimed at addressing Protection, Preparedness, and Productivity.
-              </p>
-            </div>
+              Your technology partner with a focus on providing proactive
+              solutions
+            </h1>
+            {/* <UnderLine /> */}
+            {showbtn ? <Btn btnHref={'#contact'} title={'Contact Us'} /> : null}
           </div>
         </div>
       </header>
-    </section>
-  );
+    </section>,
+    <div className="row mt-3">
+      <div className="col-md-4 col-sm-8  offset-sm-2 offset-md-7 ">
+        <div className={'card pt-4 px-4 ' + HeaderStyles.WelcomeMessage}>
+          <p className="text-secondary card-title">
+            Citrine is an IT company that offers timely services as well as a
+            vision for technology that will grow with your business. We provide
+            businesses with affordable and reliable IT services aimed at
+            addressing Protection, Preparedness, and Productivity.
+          </p>
+        </div>
+      </div>
+    </div>,
+  ];
 };
 
 export default Header;
