@@ -7,10 +7,13 @@ import Logo from '../../public/img/logo.png';
 const Nav = () => {
   const [activeState, setActiveState] = useState('Home');
   const [toggleBar, setToggleState] = useState(false);
+  const [showMenuBar, setShowMenu] = useState(false);
 
   useEffect(() => {
     if (window.screen['width'] >= 565) {
       setToggleState(true);
+    } else {
+      setShowMenu(true);
     }
   }, [setToggleState]);
 
@@ -32,9 +35,11 @@ const Nav = () => {
           />
         </a>
       </Link>
-      <div className="m-2" onClick={() => setToggleState(!toggleBar)}>
-        <i className="fas fa-bars "></i>
-      </div>
+      {showMenuBar ? (
+        <div className="m-2" onClick={() => setToggleState(!toggleBar)}>
+          <i className="fas fa-bars "></i>
+        </div>
+      ) : null}
       {toggleBar ? (
         <div
           className="collapse navbar-collapse justify-content-end text-uppercase font-weight-bold"
