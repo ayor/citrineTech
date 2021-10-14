@@ -45,7 +45,7 @@ const Header = ({ title, bannerMessage, showbtn }) => {
     showbtn = true;
   }
 
-  return [
+  return (<>
     <section className={'container px-3 ' + HeaderStyles.header}>
       <header ref={myRef} className={`row`}>
         <div className="col">
@@ -68,7 +68,7 @@ const Header = ({ title, bannerMessage, showbtn }) => {
           </div>
         </div>
       </header>
-    </section>,
+    </section>
     <div className="row mt-3">
       <div className="col-md-4 col-sm-8  offset-sm-2 offset-md-7 ">
         <div className={'card pt-4 px-4 ' + HeaderStyles.WelcomeMessage}>
@@ -80,8 +80,8 @@ const Header = ({ title, bannerMessage, showbtn }) => {
           </p>
         </div>
       </div>
-    </div>,
-  ];
+    </div>
+  </>
 };
 
 export default Header;
