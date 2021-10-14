@@ -82,6 +82,6 @@ const Header = ({ title, bannerMessage, showbtn }) => {
       </div>
     </div>
   </>
-};
+  );
 
 export default Header;
