@@ -75,7 +75,7 @@ const Header = ({ title, bannerMessage, showbtn }) => {
         </div>
       </header>
 
-      <div className="row mt-3">
+      <div className="row m-1">
         <div className="col-md-4 col-sm-8  offset-sm-2 offset-md-7 ">
           <div className={'card pt-4 px-4 ' + HeaderStyles.WelcomeMessage}>
             <p className="text-secondary card-title">
