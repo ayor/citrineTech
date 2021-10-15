@@ -1,9 +1,11 @@
 .header {
-  height: 100vh;
+  /* height: 100vh; */
+  margin: 10px;
+}
+.headerImage {
   background-image: url('/img/CITRINEFRONTPAGE.png');
-
   background-position: right;
-  background-size: 60%;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -34,7 +36,7 @@
   font-family: 'Poppins' sans-serif;
   font-weight: bold;
   font-size: 45px;
-  width: 50%;
+  /* width: 50%; */
   animation-name: anim;
   animation-duration: 2s;
 }
@@ -111,21 +113,19 @@
 }
 
 @media screen and (max-width: 768px) {
-  .header {
+  /* .headerImage {
     background-size: contain;
     background-position: bottom;
-  }
+  } */
   .headerImageClass {
     width: 140%;
     margin-top: 5%;
     margin-left: 1%;
   }
-  .HeaderImg {
+
+  /* .headerImage {
     background-position: bottom;
-  }
-  .header {
-    background-position: bottom;
-  }
+  } */
   .bannerHeading {
     margin-bottom: 5px !important;
   }
@@ -155,9 +155,7 @@
     transform: translate(-60%, -50%);
     width: 80%;
   }
-  .HeaderImg {
-    margin-top: 25px;
-  }
+
   .Line {
     top: 55%;
     left: 38%;
@@ -167,9 +165,9 @@
   .bannerHeading {
     font-size: 30px;
   }
-  .header {
+  /* .headerImage {
     background-size: 90% 40%;
-  }
+  } */
 
   .btn {
     width: 100px;

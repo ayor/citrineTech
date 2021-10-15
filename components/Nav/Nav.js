@@ -3,11 +3,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 import NavStyles from '../../styles/Nav.module.css';
 import Logo from '../../public/img/logo.png';
+import { List, ListItem, Drawer } from '@mui/material';
 
 const Nav = () => {
   const [activeState, setActiveState] = useState('Home');
   const [toggleBar, setToggleState] = useState(false);
   const [showMenuBar, setShowMenu] = useState(false);
+  const [showSideDrawer, setShowDrawer] = useState(false);
 
   useEffect(() => {
     if (window.screen['width'] >= 565) {
@@ -21,6 +23,40 @@ const Nav = () => {
     setActiveState(navType);
   };
 
+  const list = (
+    <List>
+      {[
+        { name: 'Home', path: '/' },
+        { name: 'Services', path: '/#services' },
+        { name: 'Products', path: '/#products' },
+      ].map((link, ind) => (
+        <ListItem key={ind}>
+          <Link href={link.path}>
+            <a
+              onClick={() => handleClick.bind(this, link.name)}
+              className={
+                activeState === link.name
+                  ? `nav-link m-2 ${NavStyles.navItem}`
+                  : `nav-link m-2 ${NavStyles.menuItem}`
+              }
+            >
+              {link.name}
+            </a>
+          </Link>
+        </ListItem>
+      ))}
+    </List>
+  );
+
+  const toggleDrawer = (event) => {
+    if (
+      event.type === 'keydown' &&
+      (event.key === 'Tab' || event.key === 'Shift')
+    ) {
+      return;
+    }
+    setShowDrawer(!showSideDrawer);
+  };
   return (
     <nav className={'navbar navbar-expand-md container  ' + NavStyles.navMenu}>
       <Link href="/" passHref>
@@ -35,8 +71,11 @@ const Nav = () => {
           />
         </a>
       </Link>
+      <Drawer anchor="top" open={showSideDrawer} onClose={toggleDrawer}>
+        {list}
+      </Drawer>
       {showMenuBar ? (
-        <div className="m-2" onClick={() => setToggleState(!toggleBar)}>
+        <div className="m-2" onClick={toggleDrawer}>
           <i className="fas fa-bars "></i>
         </div>
       ) : null}

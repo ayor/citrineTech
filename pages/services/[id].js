@@ -27,9 +27,9 @@ const Index = (props) => {
           className="col-md-6 p-5"
           style={{ textAlign: 'justify', textJustify: 'inter-word' }}
         >
-          <p className="p-3 text-secondary"> {serviceInfo.mainText}</p>
+          <p className=" text-secondary"> {serviceInfo.mainText}</p>
 
-          <p className="p-3 text-secondary">
+          <p className=" text-secondary">
             {' '}
             {serviceInfo.hasSecondParagraph
               ? serviceInfo.secondParagraph
@@ -37,7 +37,7 @@ const Index = (props) => {
           </p>
         </div>
         {serviceInfo.hasSubheading ? (
-          <div className="col-md-6 p-5 my-3 text-secondary">
+          <div className="col-md-6 py-lg-5 px-5 my-md-3 text-secondary">
             {serviceInfo.subheading.map((heading, ind) => {
               return (
                 <div key={ind}>
