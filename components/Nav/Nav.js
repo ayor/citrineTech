@@ -29,6 +29,7 @@ const Nav = () => {
         { name: 'Home', path: '/' },
         { name: 'Services', path: '/#services' },
         { name: 'Products', path: '/#products' },
+        { name: 'Blog', path: 'http://www.blog.citrinetechltd.com/' },
       ].map((link, ind) => (
         <ListItem key={ind}>
           <Link href={link.path}>
