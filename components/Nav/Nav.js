@@ -35,7 +35,7 @@ const Nav = () => {
         <ListItem key={ind}>
           <Link href={link.path} passHref>
             <a
-              onClick={() => handleClick.bind(this, link.name)}
+              onClick={() => handleClick(link.name)}
               className={
                 activeState === link.name
                   ? `nav-link m-2 ${NavStyles.navItem}`
