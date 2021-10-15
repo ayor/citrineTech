@@ -53,7 +53,7 @@ const Header = ({ title, bannerMessage, showbtn }) => {
             <small className="text-secondary mt-2"> {headerMessage}</small>
             <h1
               className={
-                'font-weight-bold text-dark pl-4 mb-4 ' +
+                'font-weight-bold text-dark pl-4 mb-1' +
                 HeaderStyles.bannerHeading
               }
             >
