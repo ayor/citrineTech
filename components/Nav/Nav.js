@@ -21,6 +21,7 @@ const Nav = () => {
 
   const handleClick = (navType) => {
     setActiveState(navType);
+    setShowDrawer(false);
   };
 
   const list = (
@@ -32,7 +33,7 @@ const Nav = () => {
         { name: 'Blog', path: 'http://www.blog.citrinetechltd.com/' },
       ].map((link, ind) => (
         <ListItem key={ind}>
-          <Link href={link.path}>
+          <Link href={link.path} passHref>
             <a
               onClick={() => handleClick.bind(this, link.name)}
               className={
