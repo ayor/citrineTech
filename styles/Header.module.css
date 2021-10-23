@@ -1,6 +1,6 @@
 .header {
   /* height: 100vh; */
-  margin: 10px;
+  background-color: #b3b343;
 }
 .headerImage {
   background-image: url('/img/CITRINEFRONTPAGE.png');
@@ -11,14 +11,18 @@
 
 .btn {
   width: 200px;
-  margin-top: 20px;
-  background-color: #f2c94c;
+  /* margin-top: 20px; */
+  margin-left: 50px;
+  /* background-color: #f2c94c; */
+  background-color: #f2f2f2;
   border-radius: 50px;
   box-shadow: 1px 2px 2px rgb(158, 157, 157);
 }
 
 .btn:hover {
   color: white;
+  background-color: #000;
+
   animation: btnAnim 0.2s forwards;
   transition: all 0.4s;
 }

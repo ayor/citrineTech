@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import { data } from '../../components/Services/data';
-
+import Nav from '../../components/Nav/Nav';
 const Index = (props) => {
   const router = useRouter();
   const { id } = router.query;
@@ -61,6 +61,7 @@ const Index = (props) => {
 
   return (
     <section className="container-fluid">
+      <Nav />
       <div className="row ">
         <div className="col">{detail}</div>
       </div>
