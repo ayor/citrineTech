@@ -32,7 +32,7 @@ const Nav = () => {
         { name: 'Products', path: '/#products' },
         { name: 'Blog', path: 'http://www.blog.citrinetechltd.com/' },
       ].map((link, ind) => (
-        <ListItem key={ind}>
+        <ListItem key={ind} disablePadding>
           <Link href={link.path} passHref>
             <a
               onClick={() => handleClick(link.name)}
